@@ -8,6 +8,7 @@ public class ExceptionExample {
         System.out.println("Enter the second number");
         int b = s.nextInt();
         try {
+
             float c = (float) a / b;
             System.out.println("The result is " + c);
         } catch (ArithmeticException e) {
