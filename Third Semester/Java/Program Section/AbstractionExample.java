@@ -1,9 +1,9 @@
 abstract class add {
     abstract void addition();
 
-    void different(){
-        int a=5,b=4;
-        System.out.println("The difference is " + (a-b));
+    void different() {
+        int a = 5, b = 4;
+        System.out.println("The difference is " + (a - b));
     }
 }
 

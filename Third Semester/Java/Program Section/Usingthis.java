@@ -1,12 +1,12 @@
 public class Usingthis {
-    int x;
+    int y;
 
     public Usingthis(int x) {
-        this.x = x;
+        this.y = x;
     }
 
     public static void main(String[] args) {
         Usingthis obj = new Usingthis(10);
-        System.out.println("The value of x is " + obj.x);
+        System.out.println("The value of x is " + obj.y);
     }
 }
