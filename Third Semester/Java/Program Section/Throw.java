@@ -1,13 +1,14 @@
 public class Throw {
-    static void check(int age) {
-        if (age < 18) {
+    static void check(int a, int b) {
+        int c = a / b;
+        if (c < 0) {
             throw new ArithmeticException("Not eligible");
         } else {
-            System.out.println("Eligible to vote");
+            System.out.println(c);
         }
     }
 
     public static void main(String[] args) {
-        check(19);
+        check(10, 5);
     }
 }
