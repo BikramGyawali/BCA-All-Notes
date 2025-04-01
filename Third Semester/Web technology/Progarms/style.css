@@ -6,27 +6,24 @@
   display: flex;
   justify-content: center;
 }
-ul,
-li {
-  text-decoration: none;
-  text-align: justify;
-  display: flex;
-  flex-direction: row;
+.navbar ul {
   list-style: none;
-  gap: 20px;
-  font-size: 129%;
-  border-left: 1px solid #fbf9f9;
-  background-color: gray;
-  list-style-type: none;
-  line-height: 20px;
-  padding: 8px 10px;
+  display: flex;
+  color: white;
+}
+.navbar ul li {
+  font-size: 150%;
+  padding: 20px;
+  border-left: 1px solid white;
+  background-color: whitesmoke;
+  opacity: 0.8;
 }
 ul > li > a {
   text-decoration: none;
   text-align: center;
 }
 ul > li:hover {
-  background-color: white;
-  color: black;
-  border-radius: 20%;
+  background-color: gray;
+  color: rgb(168, 72, 72);
+  border-radius: 30%;
 }
