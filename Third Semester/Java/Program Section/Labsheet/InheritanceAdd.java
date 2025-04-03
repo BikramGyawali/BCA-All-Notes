@@ -13,7 +13,7 @@ class Add extends Number {
 }
 
 class Sub extends Add {
-  public void Sub() {
+  public Sub() { // for constructor
     int d = c - a;
     System.out.println("Subtraction is" + d);
   }
@@ -23,6 +23,7 @@ public class InheritanceAdd {
   public static void main(String args[]) {
     Add a = new Add();
     a.addition();
-    Sub s = new Sub();
+    Sub s = new Sub(); // using constructor of sub class
+    // s.diff();
   }
 }
