@@ -1,0 +1,56 @@
+@charset "utf-8";
+/* CSS Document */
+*
+{
+	margin:0px;
+	padding:0px;
+}
+#divMenu
+{
+	
+	
+}
+#divMenu ul
+{
+	list-style-type:none;
+
+}
+#divMenu ul li
+{
+	background-image:url(images/menubg.png);
+	border:2px solid #fff;
+	border-radius:15px;
+	width:120px;
+	height:35px;
+	line-height:35px;
+	text-align:center;
+	float:left;
+	position:relative;
+
+	
+}
+#divMenu ul li a
+{
+	text-decoration:none;
+	color:#fff;
+	display:block;
+}
+#divMenu ul li a:hover
+{
+	background-image:url(images/hoverbg.png);
+	border-radius:15px;
+}
+#divMenu ul ul
+{
+	position:absolute;
+	display:none;
+}
+#divMenu ul li:hover > ul
+{
+	display:block;
+}
+#divMenu ul ul ul
+{
+	margin-left:120px;
+	top:0px;
+}
