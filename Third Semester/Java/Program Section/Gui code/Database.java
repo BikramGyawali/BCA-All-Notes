@@ -1,3 +1,4 @@
+import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JTextField;
@@ -17,9 +18,11 @@ public class Database {
         l1.setBounds(100, 240, 100, 20);
         JTextField t1 = new JTextField();
         t1.setBounds(200, 240, 100, 30);
+        JButton b = new JButton("Submit");
+        b.setBounds(170, 300, 100, 30);
         f.add(t);
         f.add(t1);
-
+        f.add(b);
         f.add(l);
         f.add(l1);
     }
