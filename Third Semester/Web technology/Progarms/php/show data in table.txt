@@ -1,0 +1,56 @@
+ <div class="table"> 
+<?php
+include("connection.php");
+error_reporting(0);
+
+$query = "SELECT * FROM stdrecord";
+$data = mysqli_query($conn, $query);
+
+$total = mysqli_num_rows($data);
+
+
+
+
+echo ('<h3>Total Record Available:</h3>'.'<b><h2>'.$total.'</h2></b>');
+
+if($total !=0)//Total number of rows in a table
+{
+    ?>
+    
+
+   <table border="3" cellspacing="7">
+        <tr>
+        <th width="1%">id</th>
+        <th width="3%">Full name</th> 
+        <th width="3%">Address</th>
+        <th width="5%">Contact</th>
+        <th width="3%">Email</th>
+        
+</tr>
+
+    <?php
+    $result = mysqli_fetch_assoc($data);
+    while($result)
+    {
+       echo"<tr>
+             <td>".$result['id']."</td> 
+            <td>".$result['name']."</td> 
+            <td>".$result['address']."</td>
+            <td>".$result['contact']."</td>
+            <td>".$result['email']."</td>
+            
+
+            <td><a href='edit_design.php?id=$result[id]& fname=$result[name]&address=$result[address]&contact=$result[contact]&email=$result[email]'><input type='submit' value = 'Edit' clasa= 'Edit'></a>
+
+            <a href='delete.php?id=$result[id]'><input type='submit' value = 'Delete'></a></td>
+         
+         
+       </tr>";
+    }
+}
+else{
+    echo "no records found";
+}
+?>
+</table>
+</div>

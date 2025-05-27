@@ -1,0 +1,48 @@
+
+<?php 
+$servername="localhost";  //$  sign is to variable decalaration
+$user="root";
+$password="";
+$dbname="web";
+$con=mysqli_connect($servername,$user,$password,$dbname);
+if($con){
+    echo("Database connection sucessfully");
+}
+else{
+    die("Error in connection"); // die is use to print the error 
+}
+if(isset($_POST['save'])){ // yo save submit ko name bata aako ho
+$name1=$_POST['name'];
+$email1=$_POST['email'];
+$contact1=$_POST['contact'];
+}
+$qur="Insert into table_info(name,email,contact)values('$name1','$email1','$contact1')";
+if(mysqli_query($con,$qur)){
+    echo("Record inserted");
+}
+else{
+    die("Error");
+}
+
+mysqli_close($con);
+?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register form</title>
+</head>
+<body>
+    <form action="" method="POST">
+        <label for="name">Nme:</label>
+        <input type="text" name="name" require> <br>
+        <label for="email" >Email</label>
+        <input type="email" name="email" require> <br>
+        <label for="contact">Contact:</label>
+        <input type="number" name="contact" inputmode="numeric" require>
+        <br><br>
+        <button name="save" value="ok">Submit</button> 
+    </form>
+</body>
+</html>
