@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .gal {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 15px;
+        justify-content: center;
+
+        width: 70vw;
+      }
+      .gal img {
+        width: 300px;
+        height: 200px;
+        border: 2px solid violet;
+        transition: transform 0.3s ease-in-out;
+      }
+      .gal img:hover {
+        transform: scale(1.07);
+      }
+    </style>
+  </head>
+  <body>
+    <h1 style="text-align: center">Image gallery</h1>
+    <div class="gal">
+      <img src="./images_folder/1.png" alt="" />
+      <img src="./images_folder/2.jpeg" alt="" />
+      <img src="./images_folder/image.png" alt="" />
+      <img src="./images_folder/image.png" alt="" />
+    </div>
+  </body>
+</html>
