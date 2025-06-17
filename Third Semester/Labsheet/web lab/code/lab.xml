@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding="UTF-8"?>
+
+<Employee xmlns:xs="http://www.w3.org/2001/XMLSchema-instance"
+xs:noNamespaceSchemaLocation="14schema.xsd">
+    <Name>
+        <FirstName>John</FirstName>
+        <LastName>Doe</LastName>
+    </Name>
+    <Contact>
+        <MobileNo>1234567890</MobileNo>
+        <LandLine>0987654321</LandLine>
+    </Contact>
+    <Address>
+        <City>New York</City>
+        <Street>Main St</Street>
+        <Tole>Downtown</Tole>
+    </Address>
+</Employee>
