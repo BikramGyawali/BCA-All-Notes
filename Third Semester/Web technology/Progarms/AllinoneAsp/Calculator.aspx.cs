@@ -13,21 +13,21 @@ public partial class Calculator : Page
         int a = int.Parse(t1.Text);
         int b = int.Parse(t2.Text);
         int c = a + b;
-        result.Text = c.ToString();
+        result.Text = "Addition="+c.ToString();
     }
     protected void diff(object sender, EventArgs e)
     {
         int a = int.Parse(t1.Text);
         int b = int.Parse(t2.Text);
         int c = a - b;
-        result.Text = c.ToString();
+        result.Text = "subtraction=" +c.ToString();
     }
     protected void multiply(object sender, EventArgs e)
     {
         int a = int.Parse(t1.Text);
         int b = int.Parse(t2.Text);
         int c = a * b;
-        result.Text = c.ToString();
+        result.Text = "multipliation=" + c.ToString();
     }
     protected void divide(object sender, EventArgs e)
     {
@@ -37,7 +37,7 @@ public partial class Calculator : Page
             float b = float.Parse(t2.Text);
 
             float c = a / b;
-            result.Text = c.ToString();
+            result.Text = "Division="+c.ToString();
         }
         catch (DivideByZeroException)
         {
