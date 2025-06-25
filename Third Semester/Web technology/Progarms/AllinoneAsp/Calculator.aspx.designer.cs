@@ -11,7 +11,7 @@ namespace AllinoneAsp
 {
 
 
-    public partial class WebForm1
+    public partial class Calculator
     {
 
         /// <summary>
