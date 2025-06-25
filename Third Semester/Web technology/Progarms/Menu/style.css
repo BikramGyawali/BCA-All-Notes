@@ -1,7 +1,3 @@
-/* .navbar {
-  display: flex;
-  justify-content: center;
-} */
 .navbar ul {
   list-style: none;
   display: flex;
@@ -22,6 +18,7 @@ ul li {
   text-decoration: none;
   text-align: center;
   display: block;
+  /* due to display we get hover efect in the backgroun colour also */
 }
 .navbar ul > li > a:hover {
   background-color: rgb(168, 72, 72);
@@ -30,11 +27,6 @@ ul li {
   text-align: center;
   font: small;
 }
-/* ul > li :hover {
-  background-color: gray;
-  color: rgb(168, 72, 72);
-  border-radius: 30%;
-} */
 
 .navbar ul ul {
   display: none;
@@ -46,6 +38,4 @@ ul li {
 .navbar ul ul ul {
   margin-left: 100px;
   top: 0px;
-  /* background-color: red; */
-  /* background-color: red; */
 }
