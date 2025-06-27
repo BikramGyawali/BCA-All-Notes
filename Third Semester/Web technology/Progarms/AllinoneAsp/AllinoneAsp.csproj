@@ -151,6 +151,7 @@
     <Content Include="Content\bootstrap-grid.css.map" />
     <Content Include="Calculator.aspx" />
     <Content Include="RegisterForm.aspx" />
+    <Content Include="AppForm.aspx" />
     <None Include="Scripts\jquery-3.7.0.intellisense.js" />
     <Content Include="Scripts\jquery-3.7.0.js" />
     <Content Include="Scripts\jquery-3.7.0.min.js" />
@@ -246,6 +247,13 @@
     </Compile>
     <Compile Include="RegisterForm.aspx.designer.cs">
       <DependentUpon>RegisterForm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AppForm.aspx.cs">
+      <DependentUpon>AppForm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AppForm.aspx.designer.cs">
+      <DependentUpon>AppForm.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
