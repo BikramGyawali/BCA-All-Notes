@@ -1,1 +1,1 @@
-Name: Bikram Mobile: 43434 Gender: Male Date of Birth: 3-Jan-1955 Address: hello
+Name: rer Mobile:  Gender: Male Date of Birth: DD-MM-YYYY Address: 

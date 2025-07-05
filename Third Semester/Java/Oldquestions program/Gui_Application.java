@@ -1,5 +1,6 @@
 import javax.swing.JFrame;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 import javax.swing.JRadioButton;
 import javax.swing.JTextArea;
 import javax.swing.JTextField;
@@ -96,7 +97,8 @@ public class Gui_Application {
         b1.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 if (!c1.isSelected()) {
-                    System.out.println("Please accept Terms and Conditions");
+                    JOptionPane.showMessageDialog(f, "Please accept the terms and condition first");
+
                     return;
                 }
                 String name = t1.getText();
@@ -106,12 +108,6 @@ public class Gui_Application {
                 String month = m.getSelectedItem().toString();
                 String year = y.getSelectedItem().toString();
                 String address = t3.getText();
-
-                if (name.isEmpty() || mobile.isEmpty() || address.isEmpty() || date.equals("DD") || month.equals("MM")
-                        || year.equals("YYYY")) {
-                    System.out.println("Please fill all the fields");
-                    return;
-                }
 
                 try {
                     File f1 = new File("exam.txt");
@@ -124,7 +120,7 @@ public class Gui_Application {
                     fw.write("Name: " + name + " Mobile: " + mobile + " Gender: " + gender + " Date of Birth: " + date
                             + "-" + month + "-" + year + " Address: " + address);
                     fw.close();
-                    System.out.println("File is written successfully");
+                    JOptionPane.showMessageDialog(f, "Data saved Successfully");
                 } catch (IOException ex) {
                     System.out.println("Error creating file: " + ex.getMessage());
                 }
