@@ -3,14 +3,17 @@ import javax.swing.JLabel;
 import javax.swing.JRadioButton;
 import javax.swing.JTextArea;
 import javax.swing.JTextField;
-import javax.swing.JTextPane;
+
 import javax.swing.ButtonGroup;
 import javax.swing.JButton;
 import javax.swing.JCheckBox;
 import javax.swing.JComboBox;
 
-import java.awt.TextArea;
 import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
 
 public class Gui_Application {
     public static void main(String[] args) {
@@ -87,5 +90,45 @@ public class Gui_Application {
         JButton b1 = new JButton("Submit");
         b1.setBounds(150, 400, 100, 30);
         f.add(b1);
+
+        // implementing the logic
+
+        b1.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                if (!c1.isSelected()) {
+                    System.out.println("Please accept Terms and Conditions");
+                    return;
+                }
+                String name = t1.getText();
+                String mobile = t2.getText();
+                String gender = (r1.isSelected()) ? r1.getText() : r2.getText();
+                String date = d.getSelectedItem().toString();
+                String month = m.getSelectedItem().toString();
+                String year = y.getSelectedItem().toString();
+                String address = t3.getText();
+
+                if (name.isEmpty() || mobile.isEmpty() || address.isEmpty() || date.equals("DD") || month.equals("MM")
+                        || year.equals("YYYY")) {
+                    System.out.println("Please fill all the fields");
+                    return;
+                }
+
+                try {
+                    File f1 = new File("exam.txt");
+                    if (f1.createNewFile()) {
+                        System.out.println("File is created");
+                    } else {
+                        System.out.println("File already exists");
+                    }
+                    FileWriter fw = new FileWriter("exam.txt");
+                    fw.write("Name: " + name + " Mobile: " + mobile + " Gender: " + gender + " Date of Birth: " + date
+                            + "-" + month + "-" + year + " Address: " + address);
+                    fw.close();
+                    System.out.println("File is written successfully");
+                } catch (IOException ex) {
+                    System.out.println("Error creating file: " + ex.getMessage());
+                }
+            }
+        });
     }
 }
