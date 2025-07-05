@@ -18,7 +18,7 @@ public class sum_row {
         }
 
         for (i = 0; i < 3; i++) {
-            int sum = 0;
+            // int sum = 0;
             for (j = 0; j < 3; j++) {
                 // sum += a[i][j]; this is for row
                 // sum += a[j][i]; for column
