@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Frame</title>
+    <style>
+      body {
+        margin: 0px;
+        padding: 0px;
+        font-family: "Courier New", Courier, monospace;
+        color: black;
+      }
+      .top {
+        display: flex;
+        border: 1px solid black;
+      }
+      .top .left-bar,
+      .top .right-bar {
+        width: 50%;
+        border-left: 2px solid black;
+      }
+      /* .top-bar .left-bar:first-child {
+        border-left: none; /* remove extra left border 
+      } */
+      .top .right-bar ul {
+        list-style: none;
+        margin: 0px;
+        padding: 0px;
+      }
+      .top ul li {
+        list-style: none;
+        margin-bottom: 10px;
+        text-align: center;
+      }
+      a {
+        text-decoration: none;
+      }
+      header {
+        display: flex;
+        /* align-items: center; */
+        border: 1px solid #ccc;
+        padding: 10px;
+      }
+      .logo {
+        width: 20%;
+      }
+      .site {
+        font: 24px;
+      }
+      .menu {
+        border: 1px solid black;
+        padding: 20px;
+      }
+      .container {
+        display: flex;
+        border: 1px solid black;
+        min-height: 100px;
+      }
+      .container .right,
+      .container .left {
+        border-left: 1px solid black;
+        width: 50%;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+      }
+
+      .container .right ul li {
+        list-style: none;
+      }
+      footer {
+        border: 1px solid black;
+        padding: 10px;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="top">
+      <div class="left-bar"><p>Phone : 4489485 Address: kathmandu</p></div>
+      <div class="right-bar">
+        <ul>
+          <li><a href="#">Facebook</a></li>
+          <li><a href="#">Insta</a></li>
+          <li><a href="#">Tiktok</a></li>
+        </ul>
+      </div>
+    </div>
+    <header>
+      <div class="logo">
+        <img src="" alt="image" width="100px" />
+      </div>
+      <div class="site">
+        <a href="">Visite Site</a>
+      </div>
+    </header>
+    <div class="menu">Menu</div>
+    <div class="container">
+      <div class="right">
+        <h3>Recent Post</h3>
+        <ul>
+          <li>Post 1 Title</li>
+          <li>Post 1 Title</li>
+          <li>Post 1 Title</li>
+          <li>Post 1 Title</li>
+        </ul>
+      </div>
+      <div class="left">
+        <img src="" alt="Image" />
+        <p>This is description</p>
+      </div>
+    </div>
+    <footer>footer</footer>
+  </body>
+</html>
