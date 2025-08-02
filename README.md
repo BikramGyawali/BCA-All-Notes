@@ -12,7 +12,7 @@ https://chat.whatsapp.com/DkXPeLVN5jxF2aSLiTGbHZ
 
 ## Authors
 
-- [Bikram Gyawali](https://www.github.com/BikraGyawali)
+- [Bikram Gyawali](https://www.github.com/BikramGyawali)
 
 
 ## FAQ
