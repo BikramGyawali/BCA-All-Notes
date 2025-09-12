@@ -36,27 +36,34 @@ public class OSFcFsScheduling {
 				}
 			}
 		}
-		completionTime[0] = releaseTime[0] + burstTime[0];
-		for (int k = 1; k < PuraProcesses; k++) {
-			completionTime[k] = completionTime[k - 1] + burstTime[k];
-
-		}
-		for (int m = 0; m < PuraProcesses; m++) {
-			turnAroundTime[m] = completionTime[m] - releaseTime[m];
-			waitingTime[m] = turnAroundTime[m] - burstTime[m];
+		int currentTime = 0;
+		for (int i = 0; i < PuraProcesses; i++) {
+			if (currentTime < releaseTime[i]) {
+				// CPU is idle until process arrives
+				currentTime = releaseTime[i];
+			}
+			currentTime += burstTime[i];
+			completionTime[i] = currentTime;
+			turnAroundTime[i] = completionTime[i] - releaseTime[i];
+			waitingTime[i] = turnAroundTime[i] - burstTime[i];
 		}
 
 		System.out.println("Process ID\tRelease Time\tBrust Time\tCompletion Time\tTurn Around Time\tWaiting Time");
-
 		for (int n = 0; n < PuraProcesses; n++) {
 			System.out.println(processId[n] + "\t\t" + releaseTime[n] + "\t\t" + burstTime[n] + "\t\t"
 					+ completionTime[n] + "\t\t" + turnAroundTime[n] + "\t\t\t" + waitingTime[n]);
-		}
 
-		System.out.println("Gantt Chart:");
-		for (int g = 0; g < PuraProcesses; g++) {
-			System.out.print("| P" + processId[g] + " ");
 		}
+		System.out.println("\nGantt Chart:");
+		int samaye = 0;
+		for (int i = 0; i < PuraProcesses; i++) {
+			if (samaye < releaseTime[i]) {
+				System.out.print("| Idle ");
+				samaye = releaseTime[i];
+			}
+			System.out.print("| P" + processId[i] + " ");
+			samaye += burstTime[i];
+		}
+		System.out.println("|");
 	}
-
 }
