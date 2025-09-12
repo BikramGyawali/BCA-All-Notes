@@ -11,40 +11,57 @@ public class SJFOSBG {
 		int[] completionTime = new int[PuraProcesses];
 		int[] turnAroundTime = new int[PuraProcesses];
 		int[] waitingTime = new int[PuraProcesses];
-		int[] f = new int[PuraProcesses];  //procesStatus
-		int st=0,tot=0;
-		float avgwt=0,avgta=0;
+		int[] processStatus = new int[PuraProcesses];
+		int systemTime = 0, finished = 0;
+		float avgwt = 0, avgta = 0;
 		for (int p = 0; p < PuraProcesses; p++) {
 			System.out.println("Enter process" + (p + 1) + " Brust Time:");
 			burstTime[p] = sc.nextInt();
 			System.out.println("Enter process" + (p + 1) + " Release Time:");
 			releaseTime[p] = sc.nextInt();
 			processId[p] = p + 1;
-			f[p]=0;
+			processStatus[p] = 0;
 		}
 
-		while(true){
-			int c=PuraProcesses, min=9999;
-			if (tot==PuraProcesses)
+		while (true) {
+			int c = PuraProcesses, min = 9999;
+			if (finished == PuraProcesses)
 				break;
 
-			for (int i=0; i<PuraProcesses; i++){
-				if ((releaseTime[i]<=st) && (f[i]==0) && (burstTime[i]<min)){
-					min=burstTime[i];
-					c=i;
+			for (int i = 0; i < PuraProcesses; i++) {
+				if ((releaseTime[i] <= systemTime) && (processStatus[i] == 0) && (burstTime[i] < min)) {
+					min = burstTime[i];
+					c = i;
 				}
 			}
 
-			if (c==PuraProcesses)
-				st++;
-			else{
-				completionTime[c]=st+burstTime[c];
-				st+=burstTime[c];
-				turnAroundTime[c]=completionTime[c]-releaseTime[c];
-				waitingTime[c]=turnAroundTime[c]-burstTime[c];
-				f[c]=1;
-				tot++;
+			if (c == PuraProcesses)
+				systemTime++;
+			else {
+				completionTime[c] = systemTime + burstTime[c];
+				systemTime += burstTime[c];
+				turnAroundTime[c] = completionTime[c] - releaseTime[c];
+				waitingTime[c] = turnAroundTime[c] - burstTime[c];
+				processStatus[c] = 1;
+				processId[finished] = c + 1;
+				finished++;
 			}
+		}
+		System.out.println("Process ID\tRelease Time\tBrust Time\tCompletion Time\tTurn Around Time\tWaiting Time");
+		for (int n = 0; n < PuraProcesses; n++) {
+			avgwt += waitingTime[n];
+			avgta += turnAroundTime[n];
+			int idx = processId[n] - 1; // FIX
+			System.out.println(processId[n] + "\t\t" + releaseTime[idx] + "\t\t" +
+					burstTime[idx] + "\t\t" + completionTime[idx] + "\t\t" +
+					turnAroundTime[idx] + "\t\t\t" + waitingTime[idx]);
+		}
+
+		System.out.println("\n Average Turn Around Time: " + (float) (avgta / PuraProcesses));
+		System.out.println("\n Average Waiting  Time: " + (float) (avgwt / PuraProcesses));
+		sc.close();
+		for (int i = 0; i < PuraProcesses; i++) {
+			System.out.print("| P" + processId[i] + " ");
 		}
 	}
 }
