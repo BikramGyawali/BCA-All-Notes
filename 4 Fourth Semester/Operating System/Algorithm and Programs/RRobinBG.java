@@ -39,7 +39,7 @@ public class RRobinBG {
 						completeProcess++;
 					} else {
 						systemTime += Quantum;
-						remainingTime[i] = Quantum;
+						remainingTime[i] -= Quantum;
 
 					}
 				}
