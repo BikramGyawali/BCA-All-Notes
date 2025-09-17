@@ -26,7 +26,6 @@ public class FIFOpage {
 					pageFaults++;
 				}
 			}
-			// Show frames in one row, left to right
 			for (int page : indexes) {
 				System.out.print(page + " ");
 			}
