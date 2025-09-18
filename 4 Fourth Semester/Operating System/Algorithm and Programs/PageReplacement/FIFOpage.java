@@ -9,7 +9,7 @@ public class FIFOpage {
 	static int pageFault(int pages[], int puraPages, int frameSize) {
 		HashSet<Integer> s = new HashSet<>(frameSize);
 		Queue<Integer> indexes = new LinkedList<>();
-		int pageFaults = 0;
+		int pageFaults =0 ;
 		for (int i = 0; i < puraPages; i++) {
 			if (s.size() < frameSize) {
 				if (!s.contains(pages[i])) {
