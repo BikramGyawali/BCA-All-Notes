@@ -16,23 +16,23 @@ public class CPR {
 					refBits[j] = true;
 					break;
 				}
-				if (!pageVetiyo) {
-					pageFault++;
-					while (true) {
-						if (frames.size() < frameSize) {
-							frames.add(page);
-							refBits[frames.indexOf(page)] = true;
+			}
+			if (!pageVetiyo) {
+				pageFault++;
+				while (true) {
+					if (frames.size() < frameSize) {
+						frames.add(page);
+						refBits[frames.indexOf(page)] = true;
+						break;
+					} else {
+						if (!refBits[pointer] == false) {
+							frames.set(pointer, page);
+							refBits[pointer] = true;
+
 							break;
 						} else {
-							if (!refBits[pointer] == false) {
-								frames.set(pointer, page);
-								refBits[pointer] = true;
-
-								break;
-							} else {
-								refBits[pointer] = false;
-								pointer = (pointer + 1) % frameSize;
-							}
+							refBits[pointer] = false;
+							pointer = (pointer + 1) % frameSize;
 						}
 					}
 				}
@@ -41,6 +41,7 @@ public class CPR {
 				System.out.print(f + " ");
 			}
 			System.out.println();
+
 		}
 		return pageFault;
 	}
