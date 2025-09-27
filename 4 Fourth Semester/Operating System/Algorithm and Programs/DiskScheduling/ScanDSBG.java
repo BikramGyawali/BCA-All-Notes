@@ -1,7 +1,6 @@
 import java.util.Arrays;
 import java.util.Scanner;
-
-public class ScanDSBG{
+public class ScanDSBG {
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 		System.out.println("Enter the number of requests:");
@@ -14,13 +13,55 @@ public class ScanDSBG{
 		System.out.println("Enter the initial head position:");
 		int suruPosition = sc.nextInt();
 		System.out.println("Enter total number of disks");
-		int totalDisks=sc.nextInt();
+		int totalDisks = sc.nextInt();
 		System.out.println("Enter the direction (0 for left and 1 for right):");
 		int direction = sc.nextInt();
-		Arrays.sort(requests)
-		boolean visited[] = new boolean[binti];
+		Arrays.sort(requests);
 		int totalHeadMovement = 0;
 		int ailekoPosition = suruPosition;
 		System.out.println("Disk head movements:");
+		if (direction == 1) {
+			for (int j = 0; j < binti; j++) {
+				if (requests[j] >= suruPosition) {
+					System.out.println("Moving From " + ailekoPosition + " to " + requests[j]);
+					totalHeadMovement += Math.abs(ailekoPosition - requests[j]);
+					ailekoPosition = requests[j];
+				}
+			}
+			if (ailekoPosition < totalDisks - 1) {
+				System.out.println("Moving From " + ailekoPosition + " to " + (totalDisks - 1));
+				totalHeadMovement += Math.abs(ailekoPosition - (totalDisks - 1));
+				ailekoPosition = totalDisks - 1;
+			}
+			for (int k = binti - 1; k >= 0; k--) {
+				if (requests[k] < suruPosition) {
+					System.out.println("Moving From " + ailekoPosition + " to " + requests[k]);
+					totalHeadMovement += Math.abs(ailekoPosition - requests[k]);
+					ailekoPosition = requests[k];
+				}
+			}
+		} else {
+			for (int j = binti - 1; j >= 0; j--) {
+				if (requests[j] <= suruPosition) {
+					System.out.println("Moving From " + ailekoPosition + " to " + requests[j]);
+					totalHeadMovement += Math.abs(ailekoPosition - requests[j]);
+					ailekoPosition = requests[j];
+				}
+			}
+			if (ailekoPosition > 0) {
+				System.out.println("Moving From " + ailekoPosition + " to " + 0);
+				totalHeadMovement += Math.abs(ailekoPosition - 0);
+				ailekoPosition = 0;
+			}
+			for (int k = 0; k < binti; k++) {
+				if (requests[k] > suruPosition) {
+					System.out.println("Moving From " + ailekoPosition + " to " + requests[k]);
+					totalHeadMovement += Math.abs(ailekoPosition - requests[k]);
+					ailekoPosition = requests[k];
+				}
+			}
+		}
+		System.out.println("Total head movement: " + totalHeadMovement);
+		sc.close();
 	}
 }
