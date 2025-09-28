@@ -1,4 +1,3 @@
-package DiskScheduling;
 
 import java.util.Scanner;
 

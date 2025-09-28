@@ -1,0 +1,49 @@
+import java.util.Arrays;
+import java.util.Scanner;
+
+public class CScanBg {
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter the number of requests:");
+		int binti = sc.nextInt();
+		int requests[] = new int[binti];
+		System.out.println("Enter the disk sequence:");
+		for (int b = 0; b < binti; b++) {
+			requests[b] = sc.nextInt();
+		}
+		System.out.println("Enter the initial head position:");
+		int suruPosition = sc.nextInt();
+		System.out.println("Enter total number of disks");
+		int totalDisks = sc.nextInt();
+		Arrays.sort(requests);
+		int totalHeadMovement = 0;
+		int ailekoPosition = suruPosition;
+		System.out.println("Disk head movements:");
+
+		for (int j = 0; j < binti; j++) {
+			if (requests[j] >= suruPosition) {
+				System.out.println("Moving From " + ailekoPosition + " to " + requests[j]);
+				totalHeadMovement += Math.abs(ailekoPosition - requests[j]);
+				ailekoPosition = requests[j];
+			}
+		}
+		if (ailekoPosition < totalDisks - 1) {
+			System.out.println("Moving From " + ailekoPosition + " to " + (totalDisks - 1));
+			totalHeadMovement += Math.abs(ailekoPosition - (totalDisks - 1));
+			ailekoPosition = 0;
+			System.out.println("Moving From " + (totalDisks - 1) + " to 0");
+			ailekoPosition = totalDisks - 1;
+		} else {
+			ailekoPosition = 0;
+		}
+		for (int k = 0; k < binti; k++) {
+			if (requests[k] < suruPosition) {
+				System.out.println("Moving From " + ailekoPosition + " to " + requests[k]);
+				totalHeadMovement += Math.abs(ailekoPosition - requests[k]);
+				ailekoPosition = requests[k];
+			}
+		}
+		System.out.println("Total head movement: " + totalHeadMovement);
+	}
+
+}
