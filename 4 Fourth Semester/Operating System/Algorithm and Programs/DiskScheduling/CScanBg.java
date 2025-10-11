@@ -30,12 +30,11 @@ public class CScanBg {
 		if (ailekoPosition < totalDisks - 1) {
 			System.out.println("Moving From " + ailekoPosition + " to " + (totalDisks - 1));
 			totalHeadMovement += Math.abs(ailekoPosition - (totalDisks - 1));
-			ailekoPosition = 0;
-			System.out.println("Moving From " + (totalDisks - 1) + " to 0");
 			ailekoPosition = totalDisks - 1;
-		} else {
-			ailekoPosition = 0;
 		}
+		System.out.println("Moving From " + (totalDisks - 1) + " to 0");
+		totalHeadMovement += (totalDisks - 1);
+		ailekoPosition = 0;
 		for (int k = 0; k < binti; k++) {
 			if (requests[k] < suruPosition) {
 				System.out.println("Moving From " + ailekoPosition + " to " + requests[k]);
