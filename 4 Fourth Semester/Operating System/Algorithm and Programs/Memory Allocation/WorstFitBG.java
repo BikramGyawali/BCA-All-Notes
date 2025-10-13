@@ -30,7 +30,7 @@ public class WorstFitBG{
             }
             if (worstIdx != -1) {
                 allocation[i] = worstIdx;
-                filled[worstIdx] = true;
+                memorySizes[worstIdx] -= processSizes[i];
             }
         }
 			System.out.println("Process No.\tProcess Size\tMemory Slot No.");
