@@ -60,13 +60,14 @@ public class BankersBG {
 				return;
 			}
 		}
+		System.out.print("Hence, the SAFE Sequence is as follows: ");
 		for (int i = 0; i < processNum; i++) {
 			System.out.print("P" + safe[i]);
 			if (i != processNum - 1) {
 				System.out.print(" -> ");
 			}
-			System.out.println();
-			sc.close();
 		}
+		System.out.println(".");
+		sc.close();
 	}
 }
