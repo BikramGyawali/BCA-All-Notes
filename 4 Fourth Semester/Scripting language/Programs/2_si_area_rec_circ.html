@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const SI = (p, t, r) => {
+        return (p * t * r) / 100;
+      };
+      const areaRect = (l, b) => {
+        return l * b;
+      };
+      const areaCircle = (r) => {
+        return Math.PI * r * r;
+      };
+      document.writeln(
+        "Simple Interest =" +
+          SI(1000, 2, 3) +
+          "<br> Area of Rectangle = " +
+          areaRect(19, 22) +
+          "<br> Area of Circle=" +
+          areaCircle(6).toFixed(3)
+      );
+    </script>
+  </body>
+</html>
