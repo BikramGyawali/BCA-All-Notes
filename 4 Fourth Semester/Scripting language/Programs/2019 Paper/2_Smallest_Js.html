@@ -1,0 +1,34 @@
+<!-- 1.What is JavaScript? Write JavaScript code to print smallest and larges numbers among 10 elements of an array. -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Smallest and the greatest Number</h1>
+    <script>
+      const data = [10, 20, 23, 4, 2, 5, 44, 676, 22, 77];
+      let smallest = data[0];
+      let largest = data[0];
+      //using foreach
+      //   data.forEach((number) => {
+      //     if (number < smallest) {
+      //       smallest = number;
+      //     }
+      //     if (number > largest) {
+      //       largest = number;
+      //     }
+      //   });
+      //   document.writeln("The Largest Number is" + largest + "<br>");
+      //   document.write("The Smallest Number" + smallest);
+
+      //using the direct method
+      const greatest = Math.max(...data);
+      const Smallest = Math.min(...data);
+      document.writeln("The Largest Number is" + greatest + "<br>");
+      document.write("The Smallest Number" + Smallest);
+    </script>
+  </body>
+</html>
