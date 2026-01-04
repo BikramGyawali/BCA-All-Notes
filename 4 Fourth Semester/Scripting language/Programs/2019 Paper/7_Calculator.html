@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form action="">
+      Number 1 : <input type="number" id="op1" /> <br />
+      Number 2: <input type="number" id="op2" /> <br />
+      Operation:
+      <select id="operation">
+        <option value="add">Add</option>
+        <option value="sub">Subtract</option>
+        <option value="mul">Multiply</option>
+        <option value="div">Divide</option>
+      </select>
+      <br />
+      <button onclick="calculate()" type="button">Calculate</button> <br />
+      Result : <input type="text" id="result" /> <br />
+    </form>
+    <script>
+      function calculate() {
+        const a = parseInt(document.getElementById("op1").value);
+        const b = parseInt(document.getElementById("op2").value);
+        const op = document.getElementById("operation").value;
+        var result;
+        if (op === "add") {
+          result = a + b;
+        } else if (op === "sub") {
+          result = a - b;
+        } else if (op === "mul") {
+          result = a * b;
+        } else if (op === "div") {
+          result = a / b;
+        }
+        document.getElementById("result").value = result;
+      }
+    </script>
+  </body>
+</html>
