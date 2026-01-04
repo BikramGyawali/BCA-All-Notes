@@ -1,3 +1,4 @@
+<!-- What is the use of jQuery? Write the sample program to show and hide the certain div with the use of jQuery. -->
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -10,9 +11,11 @@
   <script>
     $(document).ready(function () {
       $("#hide").click(function () {
+        //the hide is id in the btn so we use #
         $("div").hide();
       });
-      $("#show").click(function () {
+      $(".show").click(function () {
+        //the show is class in the btn so we use .
         $("div").show();
       });
     });
@@ -20,7 +23,7 @@
   <body>
     <div>This is for the testing the show and hide functin</div>
     <br />
-    <button id="show">Show</button>
+    <button class="show">Show</button>
     <button id="hide">hide</button>
   </body>
 </html>
