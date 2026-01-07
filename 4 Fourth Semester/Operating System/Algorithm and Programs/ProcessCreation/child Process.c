@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <unistd.h>
-//this code is for the linux
+
 int main() {
     pid_t pid = fork();
 
