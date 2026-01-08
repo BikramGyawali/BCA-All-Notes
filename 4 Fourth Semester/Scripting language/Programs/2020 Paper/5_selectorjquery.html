@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script>
+      $(function () {
+        $(".hide").click(function () {
+          $("p").hide();
+          $("[href]").hide();
+        });
+
+        $("#show").click(function () {
+          $("[href='3_immdeatilyinvove.html'],p").show();
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <button class="hide" type="button">Hide</button>
+    <button id="show" type="button">Show</button> <br />
+    <h1>All show</h1>
+    <p>Tag name</p>
+    <a href="hehe.html">Possession of Attribute</a><br />
+    <a href="3_immdeatilyinvove.html">Attribute Value</a>
+  </body>
+</html>
