@@ -26,7 +26,7 @@ $id = 0;
 
 // Handle Edit request
 if (isset($_GET['edit'])) {
-    $id = intval($_GET['edit']);
+    $id = intval($_GET['edit']);//intvla is use to convert value to integer
     $res = $conn->query("SELECT * FROM form WHERE id=$id");
     if ($res->num_rows == 1) {
         $row = $res->fetch_assoc();
