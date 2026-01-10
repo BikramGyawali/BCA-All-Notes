@@ -1,0 +1,40 @@
+<!-- Write a program that displays the continuous time in the web page. The time should be in the format of HH:MM:SS. -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1 id="time"></h1>
+    <script>
+      function showtime() {
+        let date = new Date();
+        let h = date.getHours();
+
+        let m = date.getMinutes();
+        let s = date.getSeconds();
+        m = checkTime(m);
+        h = checkTime(h);
+        s = checkTime(s);
+        //check am and pm
+        let period = h < 12 ? "AM" : "PM";
+        //to change the h to 12 format
+        h = h % 12;
+        h = h === 12 ? 0 : h;
+
+        document.getElementById("time").innerHTML =
+          h + ":" + m + ":" + s + " " + period;
+      }
+      setInterval(showtime, 1000);
+      //   to add the 0 to less than 10 like if m is 7 then it will be 07
+      function checkTime(i) {
+        if (i < 0) {
+          i + "0" + i;
+        }
+        return i;
+      }
+    </script>
+  </body>
+</html>
