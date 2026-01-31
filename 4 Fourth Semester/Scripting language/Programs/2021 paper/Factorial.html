@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const number = parseInt(prompt("Enter the number"));
+
+      const fact = (num) => {
+        if (num == 0 || num == 1) {
+          return 1;
+        } else {
+          return num * fact(num - 1);
+        }
+      };
+      alert("The factorial is " + fact(number));
+    </script>
+  </body>
+</html>
