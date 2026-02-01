@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form action="" onchange="display()">
+      <input type="radio" name="color" value="red" /> red
+      <input type="radio" name="color" value="blue" /> blue
+      <input type="radio" name="color" value="black" /> black
+    </form>
+    <script>
+      function display() {
+        var colors = document.getElementsByName("color");
+        for (i = 0; i < colors.length; i++) {
+          if (colors[i].checked) {
+            document.body.style.backgroundColor = colors[i].value;
+            document.cookie = "color=" + colors[i].value;
+          }
+        }
+      }
+      // this part is not need for this question but the cookie is used to store the color so it still there after the reload
+      window.onload = function () {
+        if (document.cookie.length != 0) {
+          var array = document.cookie.split("=");
+          document.body.style.backgroundColor = array[1];
+        }
+      };
+    </script>
+  </body>
+</html>

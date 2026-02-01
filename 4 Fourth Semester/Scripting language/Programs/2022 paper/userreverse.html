@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Reverse Name</title>
+  </head>
+  <body>
+    <h3>Enter Your Name</h3>
+
+    First Name:
+    <input type="text" id="fname" /><br /><br />
+
+    Last Name:
+    <input type="text" id="lname" /><br /><br />
+
+    <button onclick="reverseName()">Show Reverse Name</button>
+
+    <p id="result"></p>
+
+    <script>
+      function reverseName() {
+        let fname = document.getElementById("fname").value;
+        let lname = document.getElementById("lname").value;
+
+        // Reverse order: LastName FirstName
+        let reversedName = lname + " " + fname;
+
+        document.getElementById("result").innerHTML =
+          "Reverse Name: " + reversedName;
+      }
+    </script>
+  </body>
+</html>

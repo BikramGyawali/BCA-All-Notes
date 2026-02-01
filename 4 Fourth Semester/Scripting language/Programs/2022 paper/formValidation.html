@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      form {
+        display: flex;
+        flex-direction: column;
+        margin: 3px;
+        padding: 3px;
+      }
+      input {
+        padding: 2px;
+      }
+      label {
+        margin: 5px;
+      }
+      button {
+        width: 10%;
+        margin: 4px;
+        padding: 5px;
+      }
+      #error {
+        color: red;
+        font-size: 20px;
+      }
+    </style>
+    <script>
+      const validation = (e) => {
+        e.preventDefault();
+        let errors = [];
+        const ppattern = /^\d{10}$/;
+        const dobpattern = /^\d{4}-\d{2}-\d{2}$/;
+
+        const name = document.getElementById("name").value.trim();
+        const username = document.getElementById("username").value.trim();
+        const password = document.getElementById("password").value.trim();
+        const cpass = document.getElementById("cpass").value.trim();
+        const phone = document.getElementById("phone").value.trim();
+        const email = document.getElementById("email").value.trim();
+        const dob = document.getElementById("dob").value.trim();
+        const country = document.getElementById("country").value;
+        const gender = document.querySelector('input[name="gender"]:checked');
+        const faculty = document.querySelector('input[name="faculty"]:checked');
+        const terms = document.getElementById("terms").checked;
+
+        //validation starts
+        const atposition = email.indexOf("@");
+        const dotposition = email.lastIndexOf(".");
+        if (!name || name.length < 8) {
+          errors.push("Name must be 8 character");
+        }
+        if (!password) {
+          errors.push("Password is required");
+        }
+
+        if (password !== cpass) {
+          errors.push("Password must be same");
+        }
+        if (!ppattern.test(phone)) {
+          errors.push("Invalid Phone Pattern");
+        }
+
+        if (
+          atposition < 1 ||
+          dotposition < atposition + 2 ||
+          dotposition + 2 > email.length
+        ) {
+          errors.push("Invalid Email Pattern");
+        }
+
+        if (!dobpattern.test(dob)) {
+          errors.push("Invalid Date format");
+        }
+
+        if (!country) {
+          errors.push("Please select country");
+        }
+        if (!faculty) {
+          errors.push("Please select faculty");
+        }
+
+        if (!gender) {
+          errors.push("Please select a gender");
+        }
+
+        if (!terms) {
+          errors.push("Conform terms and condition");
+        }
+        console.log(errors);
+        let errorbox = document.getElementById("error");
+        errorbox.innerHTML = "";
+        if (errors.length > 0) {
+          errors.forEach((error) => {
+            errorbox.innerHTML += `<p> * ${error} </p>`;
+          });
+          return false;
+        }
+        return true;
+      };
+    </script>
+  </head>
+  <body>
+    <form action="" onsubmit="return validation(event);">
+      <p id="error"></p>
+      <label for=""> Name: <input type="text" id="name" /></label>
+      <label for=""> USername: <input type=" text" id="username" /></label>
+      <label for=""> Password: <input type="password" id="password" /> </label>
+      <label for="">
+        Conform Password: <input type="password" id="cpass"
+      /></label>
+      <label for=""> Phone: <input type="text" id="phone" /></label>
+      <label for=""> Email <input type="text" id="email" /></label>
+      <label for=""
+        >DOB: <input type="text" id="dob" placeholder="2020-02-22"
+      /></label>
+      <label for=""
+        >Country:
+        <select id="country">
+          <option value="">Select Country</option>
+          <option value="Nepal">Nepal</option>
+          <option value="India">India</option>
+        </select>
+      </label>
+      <label for=""
+        >Gender: <input type="radio" name="gender" value="Male" /> Male
+        <input type="radio" name="gender" value="Female" /> Female
+      </label>
+
+      <label for="">
+        Faculty:
+        <input type="checkbox" name="faculty" value="BIM" /> BIM
+        <input type="checkbox" name="faculty" value="BCa" /> BCA
+      </label>
+      <label for="">
+        <input type="checkbox" name="terms" id="terms" />
+        I accept terms and condition.
+      </label>
+      <button type="submit">SignUp</button>
+      <button type="reset">Clear</button>
+    </form>
+  </body>
+</html>
