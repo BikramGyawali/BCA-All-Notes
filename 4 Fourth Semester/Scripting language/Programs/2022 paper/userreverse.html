@@ -22,10 +22,15 @@
         let lname = document.getElementById("lname").value;
 
         // Reverse order: LastName FirstName
-        let reversedName = lname + " " + fname;
+        // let reversedName = lname + " " + fname;
+
+        const reverseResult =
+          fname.split("").reverse().join("") +
+          " " +
+          lname.split("").reverse().join("");
 
         document.getElementById("result").innerHTML =
-          "Reverse Name: " + reversedName;
+          "Reverse Name: " + reverseResult;
       }
     </script>
   </body>

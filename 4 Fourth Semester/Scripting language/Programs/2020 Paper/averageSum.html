@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<script>
+    let n = parseInt(prompt("Enter number of elements:"));
+    let arr = [];
+    let sum = 0;
+
+    for (let i = 0; i < n; i++) {
+        arr[i] = parseInt(prompt("Enter integer " + (i + 1) + ":"));
+        sum += arr[i];
+    }
+
+    let average = sum / n;
+    let largest = arr[0];
+
+    for (let i = 1; i < n; i++) {
+        if (arr[i] > largest) {
+            largest = arr[i];
+        }
+    }
+
+    document.write("Sum = " + sum + "<br>");
+    document.write("Average = " + average + "<br>");
+    document.write("Largest Number = " + largest);
+</script>
+
+</body>
+</html>

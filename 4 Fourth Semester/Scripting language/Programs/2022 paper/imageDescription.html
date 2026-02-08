@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Image Description Change</title>
+
+    <style>
+      .container {
+        display: flex;
+        gap: 20px;
+        align-items: center;
+      }
+
+      img {
+        width: 300px;
+        height: auto;
+        cursor: pointer;
+      }
+
+      p {
+        font-size: 20px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <img
+        src="https://cdn.educba.com/academy/wp-content/uploads/2020/03/mysql-oprator.jpg"
+        onmouseover="changeText()"
+        onmouseout="originalText()"
+      />
+
+      <p id="desc">This is the image description.</p>
+    </div>
+
+    <script>
+      function changeText() {
+        document.getElementById("desc").innerHTML =
+          "Description changed on mouse over the image.";
+      }
+
+      function originalText() {
+        document.getElementById("desc").innerHTML =
+          "This is the image description.";
+      }
+    </script>
+  </body>
+</html>
