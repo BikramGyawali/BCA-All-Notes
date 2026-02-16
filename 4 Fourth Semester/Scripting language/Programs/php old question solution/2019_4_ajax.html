@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>AJAX POST Example</title>
+  </head>
+  <body>
+    User Name:
+    <input type="text" id="username" />
+    <button type="button" onclick="sendData()">Submit</button>
+
+    <p id="responseArea"></p>
+
+    <script>
+      //for the post method
+      //   function sendData() {
+      //     var name = document.getElementById("username").value;
+
+      //     const res = new XMLHttpRequest();
+      //     res.open("POST", "2019_4_ajax.php", true);
+      //     res.setRequestHeader(
+      //       "Content-Type",
+      //       "application/x-www-form-urlencoded"
+      //     ); // required in t he post method
+      //     res.onreadystatechange = function () {
+      //       if (res.readyState == 4 && res.status == 200) {
+      //         document.getElementById("responseArea").innerHTML =
+      //           res.responseText;
+      //       }
+      //     };
+
+      //     res.send("username=" + name);
+      //   }
+
+      // for get method
+
+      function sendData() {
+        const name = document.getElementById("username").value;
+        const res = new XMLHttpRequest();
+        res.open(
+          "GET",
+          "2019_4_ajax.php?username=" + encodeURIComponent(name),
+          true
+        );
+        res.onreadystatechange = function () {
+          if (res.status == 200 && res.readyState == 4) {
+            document.getElementById("responseArea").textContent =
+              res.responseText;
+          }
+        };
+        res.send();
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      const loadData = () => {
+        const res = new XMLHttpRequest();
+        res.open("GET", "2021_getvalueajax.php", true);
+
+        res.onreadystatechange = function () {
+          if (res.status == 200 && res.readyState == 4) {
+            document.getElementById("result").textContent = res.responseText;
+          }
+        };
+        res.send();
+      };
+    </script>
+  </head>
+  <body>
+    <button onclick="loadData()">Get Data</button>
+    <p id="result"></p>
+  </body>
+</html>

@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+
+      <label for=""> Name : <input type="text" name="name" id="name" /> </label>
+      <button type="button" name="submit" onclick="sendData()">Submit</button>
+      <p id="result"></p>
+  
+
+    <script>
+      function sendData() {
+        const name = document.getElementById("name").value.trim();
+
+        const res = new XMLHttpRequest();
+        res.open("GET", "2022_ajax.php?user=" + encodeURIComponent(name), true);
+        res.onreadystatechange = function () {
+          if (res.status == 200 && res.readyState == 4)
+            document.getElementById("result").textContent = res.responseText;
+        };
+        res.send();
+      }
+    </script>
+  </body>
+</html>
