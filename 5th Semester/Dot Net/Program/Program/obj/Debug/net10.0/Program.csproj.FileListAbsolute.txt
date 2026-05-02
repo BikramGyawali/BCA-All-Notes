@@ -1,0 +1,15 @@
+E:\Bca-All-Notes\5th Semester\Dot Net\Program\Program\obj\Debug\net10.0\Program.GeneratedMSBuildEditorConfig.editorconfig
+E:\Bca-All-Notes\5th Semester\Dot Net\Program\Program\obj\Debug\net10.0\Program.AssemblyInfoInputs.cache
+E:\Bca-All-Notes\5th Semester\Dot Net\Program\Program\obj\Debug\net10.0\Program.AssemblyInfo.cs
+E:\Bca-All-Notes\5th Semester\Dot Net\Program\Program\obj\Debug\net10.0\Program.csproj.CoreCompileInputs.cache
+E:\Bca-All-Notes\5th Semester\Dot Net\Program\Program\obj\Debug\net10.0\Program.sourcelink.json
+E:\Bca-All-Notes\5th Semester\Dot Net\Program\Program\bin\Debug\net10.0\Program.exe
+E:\Bca-All-Notes\5th Semester\Dot Net\Program\Program\bin\Debug\net10.0\Program.deps.json
+E:\Bca-All-Notes\5th Semester\Dot Net\Program\Program\bin\Debug\net10.0\Program.runtimeconfig.json
+E:\Bca-All-Notes\5th Semester\Dot Net\Program\Program\bin\Debug\net10.0\Program.dll
+E:\Bca-All-Notes\5th Semester\Dot Net\Program\Program\bin\Debug\net10.0\Program.pdb
+E:\Bca-All-Notes\5th Semester\Dot Net\Program\Program\obj\Debug\net10.0\Program.dll
+E:\Bca-All-Notes\5th Semester\Dot Net\Program\Program\obj\Debug\net10.0\refint\Program.dll
+E:\Bca-All-Notes\5th Semester\Dot Net\Program\Program\obj\Debug\net10.0\Program.pdb
+E:\Bca-All-Notes\5th Semester\Dot Net\Program\Program\obj\Debug\net10.0\Program.genruntimeconfig.cache
+E:\Bca-All-Notes\5th Semester\Dot Net\Program\Program\obj\Debug\net10.0\ref\Program.dll
