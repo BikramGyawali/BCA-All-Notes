@@ -431,6 +431,7 @@ Note :
     3. method is also by default private 
 */
 
+/*
 
 // claculation of simple interes 
 
@@ -453,5 +454,86 @@ namespace SimpleInterest
             Console.WriteLine("The simple interest is " + c.SICalculation(20000, 3, 4));
         Console.ReadKey();
         }
+    }
+}
+*/
+
+
+/*simple inheritance
+
+using System;
+using System.Xml.Serialization;
+namespace simpleInheritance
+{
+   internal class program
+    {
+        class A
+        {
+            public void display()
+            {
+                Console.WriteLine("hello user");
+            }
+        }
+
+        class B : A
+        {
+            public void test()
+            {
+                Console.WriteLine("this is test");
+            }
+        }
+
+       class Inheritance
+        {
+            public static void Main(String[] args)
+            {
+                B b = new  B();
+                b.display();
+                b.test();
+                Console.ReadKey();
+            }
+        }
+
+    }
+}
+
+*/
+// write a program to base class name employe has salary 35000 and who is manager get bonus 20000 per month. uisng inheritance
+
+using System;
+namespace example
+{
+    internal class program
+    {
+        class employer
+        {
+         public  int salary = 30000;
+            public void Salary()
+            {
+                Console.WriteLine("Salay is  {0}", salary);
+            }
+        }
+        class manager : employer
+        {
+           public int bonous = 20000;
+           public int total = salary + bonous;
+
+            public void managerSalary()
+            {
+                Console.WriteLine(total);
+            }
+
+        }
+
+        class calulation
+        {
+            public static void Main(String[] args)
+            {
+                manager m = new manager();
+                m.Salary();
+                m.managerSalary();
+            }
+        }
+      
     }
 }
