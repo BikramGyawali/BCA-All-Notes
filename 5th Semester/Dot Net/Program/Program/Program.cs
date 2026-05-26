@@ -458,6 +458,32 @@ namespace SimpleInterest
 }
 */
 
+/*
+example of call by vlaue : this is the default way of call method 
+definition : When you pass a variable to a method,
+C# makes a copy of that value. The method works on the copy. The original variable is completely safe and never touched.
+
+using System;
+class program
+{
+    static void Show(int x)
+    {
+        x = x + 10;
+        Console.WriteLine("Inside the value " + x);
+    }
+    public static void Main(String[] args)
+    {
+        int a = 20;
+        Show(a);
+        Console.WriteLine("Outside method value" + a);
+    }
+}
+
+Call by reference : Instead of sending a copy, you send the actual memory address of the variable. Whatever the method does to it directly changes your
+original variable.
+*/
+using System;
+
 
 /*simple inheritance
 
@@ -498,7 +524,9 @@ namespace simpleInheritance
 }
 
 */
-// write a program to base class name employe has salary 35000 and who is manager get bonus 20000 per month. uisng inheritance
+
+
+/* write a program to base class name employe has salary 35000 and who is manager get bonus 20000 per month. uisng inheritance
 
 using System;
 namespace example
@@ -516,11 +544,15 @@ namespace example
         class manager : employer
         {
            public int bonous = 20000;
-           public int total = salary + bonous;
+           public int total ;
 
+            public manager()
+            {
+                total = salary + bonous;
+            }
             public void managerSalary()
             {
-                Console.WriteLine(total);
+                Console.WriteLine("Manager salary is {0}",total);
             }
 
         }
@@ -532,8 +564,10 @@ namespace example
                 manager m = new manager();
                 m.Salary();
                 m.managerSalary();
+                Console.ReadKey();
             }
         }
       
     }
 }
+*/
