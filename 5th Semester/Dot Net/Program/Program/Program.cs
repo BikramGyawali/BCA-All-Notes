@@ -481,10 +481,79 @@ class program
 
 Call by reference : Instead of sending a copy, you send the actual memory address of the variable. Whatever the method does to it directly changes your
 original variable.
-*/
+
+using System;
+class program
+{
+    static void show (ref int x )
+    {
+        x = x + 10;
+        Console.WriteLine("Inside the function value {0}", x);
+    }
+
+  public  static void Main(String[] args)
+    {
+        int a = 10;
+        show(ref a);
+        Console.WriteLine("Outside the function vlaue {0}", a);
+        Console.ReadKey();
+    }
+}
+
+Output parmater :
+Definition : This is like ref but done specially for output.the method fills the variable for you . we dont need to intialize before call 
+in fact the method is required to assign it before returning.
+where to use it : needs to produce multiple results 
+we assign the vlaue inside the method in out but not in the ref and the value;
+and dont assign any value inside the main class in out but iin the ref and the value we assign the value
+
+
+
+using System;
+ internal class program
+{
+    static void Show( out int x)
+    {
+        x = 50; // assign value inside the method
+        Console.WriteLine("Inside the method "+x);
+    }
+
+    static void Main(String[] args)
+    {
+        int a; // we dont need to assign vlaue fo the a 
+        Show(out a);
+        Console.WriteLine("Outside the function " + a);
+        Console.ReadKey();
+    }
+}
+
+
+calss by params
+definitionn: mthod accept any number of argument of the same types.
+Why it exists: You often don't know at design time how many values will be passed. params removes the need to create an array manually before every call.
+ we can pass any number of the parameter we dont need to assign the array
+
+
 using System;
 
+internal class program
+{
+    static void show(params int[] num)
+    {
+        int total = 0;
+        foreach(int n in num)
+            total += n;
+        Console.WriteLine("Total : " + total);
+    }
 
+    static void Main(String[] args)
+    {
+        show(1, 2);
+        show(1, 2, 3);
+        Console.ReadKey();
+    }
+}
+*/
 /*simple inheritance
 
 using System;
@@ -571,3 +640,5 @@ namespace example
     }
 }
 */
+
+// polymorpism 
