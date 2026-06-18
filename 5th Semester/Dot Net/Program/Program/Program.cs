@@ -553,11 +553,72 @@ internal class program
         Console.ReadKey();
     }
 }
+
+Method overloading
+
+
+using System;
+namespace simpleMethodOverloading
+{
+    internal class program
+    {
+        public void add(int a, int b)
+        {
+            int c = a + b;
+            Console.WriteLine("The sum of 2 numbers is {0} ", c);
+
+        }
+        public void add(int x, int y, int z)
+        {
+            int sum = x + y + z;
+            Console.WriteLine("The sum of three numbers is {0} ", sum);
+        }
+        public static void Main(string[] args)
+        {
+            program p = new program();
+            p.add(2, 3);
+            p.add(2, 3, 4);
+            Console.ReadKey();
+        }
+    }
+}
+
+
+with return of int 
+namespace simpleMethodOverloading
+{
+internal class program
+    {
+        public int add(int a, int b)
+        {
+            //int c = a+b;
+            //Console.WriteLine("The sum of 2 numbers is ", c);
+            return a + b;
+
+        }
+        public int add(int x,int y, int z)
+        {
+            //int sum = x + y + z;
+            //Console.WriteLine("The sum of three numbers is ", sum);
+            return x + y + z;
+        }
+        public static void Main(string[] args)
+        {
+            program p = new program();
+            //p.add(2, 3);
+            Console.WriteLine(p.add(2, 3));
+            Console.WriteLine(p.add(2, 3, 4));
+            //p.add(2, 3, 4);
+            Console.ReadKey();
+        }
+    }
+}
 */
+
 /*simple inheritance
 
 using System;
-using System.Xml.Serialization;
+
 namespace simpleInheritance
 {
    internal class program
@@ -639,6 +700,114 @@ namespace example
       
     }
 }
-*/
 
-// polymorpism 
+
+consustructor 
+
+            i. Default Constructor
+
+
+using System;
+namespace defaultConstructor
+{
+
+   
+    public class Multiplication
+    {
+        public int a, b;
+        public Multiplication(){
+            a=20;
+            b=30;
+        }
+    }
+    public class program
+    {
+        public static void Main(String[] agrs)
+        {
+            Multiplication m = new Multiplication();
+            Console.WriteLine(m.a);
+            Console.WriteLine(m.b);
+        }
+    }
+
+}
+
+ii. Instance/Paramterize Constructor
+
+using System.Xml.Serialization;
+
+public class program
+{
+    int x, y;
+    program(int a,int b)
+    {
+        x = a;
+        y = b;
+    }
+
+    void add()
+    {
+        int c= x+y;
+        Console.WriteLine(c);
+    }
+
+    public static void Main(String[] args)
+    {
+        program p = new program(2, 3);
+        p.add();
+    }
+}
+
+iii. Overload constructor 
+
+
+class program
+{
+    int mul;
+    program(int a,int b)
+    {
+        mul = a * b;
+        Console.WriteLine("The mul of 2 number is {0}", mul);
+    }
+
+    program(int a,int b, int c)
+    {
+        mul = a * b*c;
+        Console.WriteLine("The multiplication of 3 numbers is" + mul);
+    }
+
+    public static void Main(String[] args)
+    {
+       new program(2, 3);
+        new program(2, 3, 4);
+        Console.ReadKey();
+    }
+}
+
+
+iv. Static constuctor
+
+
+class program
+{
+    public program()
+    {
+        Console.WriteLine("Run when we call it ");
+    }
+    static program()
+    {
+        Console.WriteLine("Run for one time when the instance of class is created \n Dont accept any access modifier");
+
+    }
+
+    public static void Main(String[] args)
+    {
+        program p= new program(); // both the constructor are called
+
+        new program(); // escape static as it run for only one time
+
+
+    }
+}
+
+*/
