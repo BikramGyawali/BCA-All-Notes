@@ -810,4 +810,360 @@ class program
     }
 }
 
+
+Example of the destructor 
+
+using System;
+internal class program
+{
+    public program(String message)
+    {
+        Console.WriteLine(message);
+    }
+    ~program()
+    {
+        Console.WriteLine("call destuctor");
+    }
+    public void afterDestructor()
+    {
+        Console.WriteLine("This method is called after destructor");
+    }
+   
+
+   
+
+    public static void Main(String[] args)
+    {
+        string message = "Call from constructor";
+        program p = new program(message);
+        p.afterDestructor();
+       
+      
+        Console.ReadKey();
+    }
+}
+
+
+using this keyword to call another constructor
+
+
+using System;
+
+public class detail
+{
+    int id;
+    string name;
+    public detail(int id,string name)
+    {
+        this.id = id;
+        this.name = name;
+        Console.WriteLine("Call first constuctor");
+    }
+
+    public detail(int id):this(id,"Bikram")
+    {
+        Console.WriteLine("Name set to default");
+        Console.WriteLine("Call first constuctor");
+    }
+    public void show()
+    {
+        Console.WriteLine("Your id is {0} and name is {1}", id, name);
+    }
+}
+
+public class program
+{
+    public static void Main(String[] args)
+    {
+       detail d= new detail(2);
+        d.show();
+        Console.ReadKey();
+    }
+}
+
+
+
+===================example of get and set================================
+
+
+
+
+internal class program
+{
+    private int number;
+    public int score
+    {
+        get
+        {
+            return number;
+        }
+        set
+        {
+            number = value;
+        }
+    }
+    public void display()
+    {
+        Console.WriteLine("The number is {0}", number);
+    }
+}
+    internal class test
+    {
+
+
+        public static void Main(String[] args)
+        {
+            program p = new program();
+            p.score = 20;  // we assign the value to the private field of another class 
+            //p.display();
+            Console.WriteLine("The number is {0}", p.score);
+        }
+    }
+
+
+
+automatic properites
+
+============display your information using the properties
+
+
+public class detail {
+    private string name;
+        public string sName
+    {
+        get
+        {
+            return name;
+        }
+        set
+        {
+            name= value;
+        }
+    }
+
+
+    public int age { get; set; } // this is the automatic method
+
+    public string address {  get; set; }   // the address is string
+
+
+    public void display()
+    {
+        Console.WriteLine("Your nam is {0} and your age is {1}. You are from {2}", name, age, address);
+    }
+}
+
+
+
+internal class program
+{
+    public static void Main(String[] args)
+    {
+        detail d = new detail();
+
+        Console.WriteLine("Enter your name , age  and addresss one by one");
+        d.sName = Console.ReadLine();
+        d.age=Convert.ToInt32(Console.ReadLine()); // or we can write d.age=int.Parse(Console.ReadLine());
+        d.address = Console.ReadLine();
+        d.display();
+        Console.ReadKey();
+
+    }
+}
+
+
+=======   display your family details ==
+namespace PropertiesExample
+{
+    class Student
+    {
+        private int _StdId;
+        private string _Name;
+        private string _Fname;
+
+        public int StdId
+        {
+            set
+            {
+                if (value <= 0)
+                {
+                    Console.WriteLine("The ID can not be zero or negative");
+
+                }
+                else
+                {
+                    _StdId = value;
+                    
+
+
+                }
+
+            }
+            get
+            {
+                return _StdId;
+
+            }
+
+        }
+        public string Name
+        {
+            set
+            {
+                if (string.IsNullOrEmpty(value))
+                {
+                    Console.WriteLine("Please Enter Your Name");
+                }
+                else
+                {
+                    _Name = value;
+                }
+
+
+            }
+            get
+            {
+                return _Name;
+
+            }
+        }
+        public string Fname
+        {
+            set
+            {
+                if (string.IsNullOrEmpty(value))
+                {
+                    Console.WriteLine("Plz Enter your father name");
+                }
+                else
+                {
+                    _Fname = value;
+                }
+
+            }
+            get
+            {
+                return _Fname;
+            }
+        }
+    }
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            Student s = new Student();
+            s.StdId = 5;
+            s.Name = "Mahesh";
+            
+
+
+            s.Fname = "Binod";
+            Console.WriteLine("My ID=" + s.StdId);
+            Console.WriteLine("My  name is=" + s.Name);
+            Console.WriteLine("My father name is=" + s.Fname);
+            Console.ReadKey();
+
+        }
+    }
+}
+
+
+
+==========================indexier example========================
+
+
+public class Student
+{
+    private int[] marks = new int[10];
+
+    public int this[int i]{
+        get { return marks[i]; }
+        set { marks[i] = value; }
+    }
+}
+class program
+{
+    public static void Main(String[] args)
+    {
+        Student s = new Student();
+        s[0] = 40;
+        s[1] = 70;
+        Console.WriteLine(s[0]);
+        Console.WriteLine(s[1]);
+        Console.ReadKey();
+        // this method is for the loop 
+        //for (int i = 0; i < 10; i++)
+        //  {
+        //      s[i] = i * 3;
+        //  }
+
+        //  for(int i=0;i<10;i++){
+        //      Console.WriteLine(s[i]);
+        //  }
+    }
+}
+
+==========  static classes ===============
+
+
+
+static class detail
+{
+   public  static string name;
+  public  static int age;
+
+    public static void show()
+    {
+        Console.WriteLine("Your name is {0} and your age is {1}", name, age);
+    }
+}
+
+class program
+{
+    public static void Main(String[] agrs)
+    {
+        detail.name = "Bikram Gyawali";   // we dont need to creat the object  fo the staic class 
+        detail.age = 20;   // the member of the static clsss must ne static to be access by other class 
+        detail.show();
+        Console.ReadKey();
+    }
+}
+
+
+================== finalizer ====================
+
+
+
+
+class fileFinalizer
+{
+    public fileFinalizer()
+    {
+        Console.WriteLine("File is opened");
+    }
+
+
+    public void readFile()
+    {
+        Console.WriteLine("File read");
+    }
+   
+    ~fileFinalizer()
+    {
+        Console.WriteLine("Call finalizer");
+    }
+}
+
+class program
+{
+    public static void Main(String[] args)
+    {
+        fileFinalizer f = new fileFinalizer();
+        f.readFile();
+        f = null;
+        GC.Collect();
+        Console.ReadKey();
+    }
+}
+
 */
