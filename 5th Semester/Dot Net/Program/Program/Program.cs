@@ -1166,4 +1166,617 @@ class program
     }
 }
 
+===================   struct or structure ==========
+ this doesnt suppport inheritance
+
+
+using System.Xml.Linq;
+
+struct student
+{
+    public int age;
+    public string name;
+
+   
+}
+
+class program
+{
+   public  static void Main(String[] args)
+    {
+        //student s = new student();   we can use this also
+        student s;
+        s.age=20;
+        s.name="Bikram Gyawali";
+        Console.WriteLine("Name = {0} and age = {1}", s.age, s.name);
+        Console.ReadKey();
+    }
+}
+
+
+=========================== base keyword=======
+base is a keyword that refers to the parent class (base class) from inside a child class. 
+It lets you access the parent's members that are hidden or overridden by the child. 3 use of base class
+
+    1. call parent class method
+    2. call parent class constructor
+    3. call parent class method with overide
+
+
+
+
+public class person
+{
+    public int age;
+    public string name;
+
+    public person(int age,string name)
+    {
+        this.age = age;
+        this.name = name;
+        Console.WriteLine("Call student constructor");
+    }
+
+    public virtual void show() // virtual keyword allow for override
+    {
+        Console.WriteLine("Name = {0} \n and age = {1}", name, age);
+    }
+}
+
+public class student : person
+{
+    public int id;
+    public student(int id,int age,string name) : base(age, name)//this call the parent constructor and set value of age and name
+    {
+        this.id = id;
+            Console.WriteLine("Call person constructor");
+     }
+
+    // override the method
+
+    public override void show() // override keyword is necessary
+    {
+        base.show(); // call the parent class method without override
+        Console.WriteLine("data of student \n");
+        Console.WriteLine("id = {0} \n name={1} \n age={2}",id,name, age);
+    }
+
+    public void showName()
+    {
+        Console.WriteLine("Name = {0} ", base.name); //access the parent class field
+    }
+}
+
+class program
+{
+    public static void Main(String[] args)
+    {
+        student s = new student(2, 20,"Bikram Gyawali");
+
+        Console.Write("display data \n");
+        s.show();
+        Console.Write("display base class name field");
+        s.showName();
+        Console.ReadKey();    }
+}
+
+
+======================  inheritance ==========
+
+==============1. Multilevel inheritance ============
+
+
+
+public class Number
+{
+    public int a, b, sum, diff;
+    public void  ReadNumber(int x,int y)
+    {
+        a = x; b = y;
+        Console.WriteLine("a={0}\n b={1}", a, b);
+    }
+}
+
+public class Add:Number
+{
+    public void add()
+    {
+        sum = a + b;
+        Console.WriteLine("Addition"+sum);
+    }
+}
+
+class Sub: Add
+{
+    public void sub()
+    {
+        diff = a - b;
+        Console.WriteLine("Subtraction"+diff);
+    }
+}
+
+class program
+{
+    public static void Main(String[] args)
+    {
+      Sub s = new Sub();
+        s.ReadNumber(4, 10);
+        s.add();
+        s.sub();
+        Console.ReadKey();
+    }
+}
+
+
+=======================   Hierarchical inheritance ===========
+
+
+class Calculation {
+  public int a, b;
+    public void ReadDimension(int a, int b)
+    {
+        this.a=a;
+        this.b = b ;
+    }
+}
+
+ class Rectangle : Calculation
+{
+    public void AreaRect()
+    {
+        base.ReadDimension(10, 5);
+        int area = a * b;
+        Console.WriteLine("Area" + area);
+    }
+}
+
+class Triangle : Calculation
+{
+    public void AreaTri()
+    {
+        base.ReadDimension(10, 5);
+        double area = 0.5 * a * b;
+        Console.WriteLine("Area of triangle" + area);
+    }
+}
+
+class program
+{
+    public static void Main(String[] args)
+    {
+        Triangle t = new Triangle();
+        t.AreaTri();
+        Rectangle r = new Rectangle();
+        r.AreaRect();
+        Console.ReadKey();
+    }
+}
+
+
+========  abstract class and method =====
+
+we cannt create a object for the abstract class because it may include the abstract method without implementation
+
+
+
+
+abstract class Shape
+{
+    public abstract void area();
+    public void display()
+    {
+        Console.Write("This is method without abstraction \n");
+    }
+}
+
+class Circle : Shape
+{
+    int r;  
+    public Circle(int r)
+    {
+        this.r = r;
+    }
+   
+    
+    public override void area()
+    {
+        double a = 3.14 * r * r;
+        Console.WriteLine("The area of the circle is " + a);
+    }
+}
+
+ class program
+{
+    public static void Main(String[] args)
+    {
+        Circle c = new Circle(2);
+        c.display();
+        c.area();
+        Console.ReadKey();
+    }
+}
+
+
+1.  Write a program to implement abstraction using an abstract class
+BankAccount with appropriate abstract properties and methods.
+Create suitable derived classes to calculate interest for different account types and display the results.
+
+
+
+public abstract class BankAccount{
+    public abstract string AccountType { get; }
+
+    public abstract double CalculateInterest(double amount);
+    
+    public void Display()
+    {
+        Console.WriteLine("This is bank account");
+    }
+}
+
+class SavingAccount : BankAccount
+{
+    public override string AccountType
+    {
+        get
+        {
+            return "Saving Account";
+        }
+    }
+
+    public override double CalculateInterest(double amount)
+    {
+        return amount * 0.5;
+    }   
+    
+}
+
+class CurrentAccount : BankAccount
+{
+    public override string AccountType{ get
+        {
+
+            return "Current Account";
+        }
+    }
+
+    public override double CalculateInterest(double amount)
+    {
+        return 0;
+    }
+}
+
+class program
+{
+    public static void Main(String[] args)
+    {
+        BankAccount ba = new SavingAccount();  // we cannt create the class of abstract class
+                                               // so we create object of inheritate class . this is also called upcasting
+        Console.WriteLine("Account Type " + ba.AccountType);
+        Console.WriteLine("Interest amount " + ba.CalculateInterest(1000));
+
+
+
+        BankAccount bc = new CurrentAccount(); // same reason of above
+        Console.WriteLine("Account Type "+ bc.AccountType);
+        Console.WriteLine("Interest Amount  " + bc.CalculateInterest(110));
+
+        Console.ReadKey();
+
+
+    }
+}
+
+
+====================== INTERFACE ========================   
+   1. Write a C# program to implement an interface named IPayment that is used by 
+EsewaPayment and KhaltiPayment classes. 
+
+
+interface  IPayment
+{
+     void Payment(double amount);
+}
+
+class Esewa : IPayment
+{
+   public void Payment(double amount)   // its compulsory to make the method public
+    {
+        Console.WriteLine("The amount paid by esewa is " + amount);
+    }
+}
+
+class Khalti : IPayment
+{
+    public  void Payment(double amount)
+    {
+        Console.WriteLine("The amount paid by the khalti is " + amount);
+    }
+}
+
+ class program
+{
+    public static void Main(String[] args)
+    {
+        Esewa ip = new Esewa();
+        ip.Payment(900);
+
+        IPayment pi = new Khalti();
+        pi.Payment(300);
+
+        Console.ReadKey();
+    }
+}
+
+2. Calculate the area and permiter of the rectangle using the interface
+
+
+
+ interface Calculation
+{
+    void getData(int l, int b);
+    int Area();
+    void Perimeter();
+}
+
+class Rectangle : Calculation
+{
+    int l, b;
+    public void getData(int l,int b)
+    {
+        this.l = l;
+        this.b = b;
+    }
+
+    public int Area()
+    {
+        return l * b;
+    }
+    public void Perimeter()
+    {
+        int p = 2 * (l + b);
+        Console.WriteLine("The permiter is " + p);
+    }
+}
+
+class program
+{
+    public static void Main(String[] args)
+    {
+        Rectangle re = new Rectangle();
+        re.getData(4, 5);
+        Console.WriteLine("The are of the rectangle is " + re.Area());
+        re.Perimeter();
+        Console.ReadKey();
+    }
+}
+
+
+================================Polymorphism in C# 
+                                            Compile Time 
+                                            ❖Method Overloading 
+                                            ❖Operator Overloading 
+                                            Runtime 
+                                            ❖Method Overriding 
+                                            ❖Virtual Function 
+
+                    ================
+
+1). Example program to demonstrate Online Shopping Delivery Charge .
+
+
+
+class Delivery
+{
+    public void Charge()
+    {
+        Console.WriteLine("The delivery charge is 50 ");
+    }
+
+    public void Charge(int weight)
+    {
+        double charge = 50+ (weight*10);
+        Console.WriteLine("Delivery charge with weight" + charge);
+    }
+
+    public void Charge(int weight, string location)
+    {
+        double charge = 50 + (weight * 10);
+        if (location == "Kathmandu")  charge += 20;
+        else charge += 30;
+
+        Console.WriteLine("Delivery charge for the location {0} is rs {1}", location,charge);
+    }
+}
+
+class program
+{
+    static void Main(String[] args)
+    {
+        Delivery d = new Delivery();
+        d.Charge();
+        d.Charge(20);
+        d.Charge(10, "Kathmandu");
+        d.Charge(2, "Butwal");
+        Console.ReadKey();
+    }
+}
+
+
+=================== method overridding ===============
+ there must be virtual keyword in base class method and override keyword in the derive class method
+1. WAP to implement a notification system using the  methodoveride
+
+
+class Notification
+{
+    public virtual void notificate()
+    {
+        Console.WriteLine("This is a notificaton sytem");
+    }
+}
+class Email : Notification
+{
+    public override void notificate()
+    {
+        Console.WriteLine("This is email notification");
+    }
+}
+
+class Sms : Notification
+{
+    public override void notificate()
+    {
+        Console.WriteLine("SMS notification");
+    }
+}
+
+class program
+{
+    public static void Main(String[] args)
+    {
+        Notification n = new Notification();
+        n.notificate();
+
+        Email em = new Email();
+        em.notificate();
+
+        Sms s = new Sms();
+        s.notificate();
+
+        Console.ReadKey();
+    }
+}
+
+
+=======================   VIRTUAL METHOD ============   
+
+1. Wap to implement a virtual method 
+
+
+class VirtualMethod
+{
+    public virtual void message()
+    {
+        Console.WriteLine("The virtual method from base class");
+    }
+}
+
+class dervideClass : VirtualMethod
+{
+    
+    public override void message()
+    {
+        base.message();
+        Console.WriteLine("This is a method of dervied class");
+    }
+}
+
+class program
+{
+    public static void Main(String[] args)
+    {
+        dervideClass d = new dervideClass();
+        d.message();
+        Console.ReadKey();
+    }
+}
+
+
+========Upcasting and downcasting ===========
+wap to demostract the upcast and downcast
+
+
+class Animal
+{
+    public void eat()
+    {
+        Console.WriteLine("Animal eats");
+    }
+}
+
+class Dog : Animal
+{
+    public void bark()
+    {
+        Console.WriteLine("the dog bark");
+    }
+}
+
+class Program
+{
+    public static void Main(String[] args)
+    {
+        //upcasting
+
+        Animal a = new Dog();
+        a.eat();
+        //a.bark();  throw error as the method is hidden from the reference
+
+
+        // another mehtod of upcasting
+
+
+        //Dog d = new Dog();
+        //Animal a = d;    // upcasting
+        //a.eat();
+        ////a.bark();   the animal is a reference and the method is inside the dog so it will throw error 
+        //d.bark(); // this work as we have the object of the dog as d refernce
+        //downcast
+
+        Dog dd =  (Dog)a;
+        dd.eat();
+        dd.bark();
+
+        Console.ReadKey();
+    }
+}
+
+
+============= Operator Overloading =======================
+
+                overloading unary operator 
 */
+
+class Calculation
+{
+    public int a, b;
+   public Calculation(int x, int y)
+    {
+        a = x;
+        b = y;
+    }
+
+    public void display()
+    {
+        Console.WriteLine("a= {0} \n b={1}", a, b);
+    }
+
+    // operator overloading 
+
+    public static  Calculation operator- (Calculation c){
+        //c.a = -c.a;
+        //c.b=-c.b;
+        //return c;   as this modify the real object 
+        return new Calculation(-c.a, -c.b);  // this will return new object 
+    }
+
+    
+}
+
+class Program
+{
+    public static void Main(String[] args)
+    {
+        Calculation ca = new Calculation(20, 30);
+        Console.WriteLine("Simple object data befor operator overload");
+        ca.display();
+
+        ca = -ca;
+        Console.WriteLine("New object contains");
+        ca.display();
+
+       
+        Console.ReadKey();
+    }
+}
