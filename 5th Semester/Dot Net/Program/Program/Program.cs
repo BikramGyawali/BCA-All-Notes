@@ -1353,6 +1353,40 @@ class program
 }
 
 
+            ======= multiple inheritance ===
+using System;
+
+interface Bird
+{
+     void eat();
+}
+interface  Dog
+{
+     void Bark();
+}
+class Animal : Bird, Dog
+{
+    public void eat()
+    {
+        Console.WriteLine("Eat food");
+    }
+    public void Bark() {
+        Console.WriteLine("Bark");
+    }
+}
+class Program
+{
+    public static void Main(String[] args)
+    {
+        Animal a = new Animal();
+        a.eat();
+        a.Bark();
+
+        Console.ReadKey();
+    }
+}
+
+
 ========  abstract class and method =====
 
 we cannt create a object for the abstract class because it may include the abstract method without implementation
@@ -1736,7 +1770,7 @@ class Program
 ============= Operator Overloading =======================
 
                 overloading unary operator 
-*/
+
 
 class Calculation
 {
@@ -1780,3 +1814,517 @@ class Program
         Console.ReadKey();
     }
 }
+
+
+============ ++ incrementar operator ==========
+
+
+
+class counter
+{
+    public int x;
+   public counter(int x)
+    {
+        this.x = x;
+    }
+
+   
+
+    public static  counter operator ++(counter c)  // we can put any name in the object of the counter like (counter cccc)
+    {
+        return new counter(c.x++);
+    }
+    public void display()
+    {
+        Console.WriteLine("x = "+x);
+    }
+}
+
+class Program
+{
+    public static void Main(String[] args)
+    {
+        counter c = new counter(40);
+        Console.WriteLine("Value before operator overload");
+        c.display();
+
+        Console.WriteLine("Value before operator overload");
+
+       c=c++; //using overload operator ++
+        c.display();
+        Console.ReadLine();
+    }
+}
+
+
+======================Binary operator overloading ======================
+wap to implement the +,-,* for compearing the number obtain by the operator
+
+
+
+class Student
+{
+    public int marks;
+    public string name;
+
+    public Student(string name,int marks)
+    {
+        this.marks = marks;
+        this.name = name;
+    }
+
+    // overload +
+
+    public static Student operator +(Student s1,Student s2)
+    {
+        return new Student("Total/Combine", s1.marks + s2.marks);  // this become new object as Student(name,marks)
+    }
+
+    //Overload -
+    public static Student operator -(Student s1,Student s2)
+    {
+        return new Student("Difference", s1.marks - s2.marks);
+    }
+
+    //overload *
+    public static Student operator *(Student s1,int mul)
+    {
+        return new Student(s1.name, s1.marks * mul);
+    }
+
+    public void display()
+    {
+        Console.WriteLine("Name : {0}     marks : {1}", name, marks);
+    }
+}
+
+class Program
+{
+    public static void Main(string[] args)
+    {
+        Student s1 = new Student("Bikram", 90);
+        Student s2 = new Student("Hari", 85);
+
+        // data of s1 student
+        s1.display();
+
+        //data of d2 student
+
+        s2.display();
+
+        // + operator call
+        Student s4 = s1 + s2;
+        s4.display();
+
+        // - operator
+
+        Student s5 = s1 - s2;
+        s5.display();
+
+        // * operator
+
+        Student s6 = s1 * 2;
+        s6.display();
+
+        Console.ReadKey();
+    }
+}
+    2. Write a C# program to demonstrate operator overloading using + operator to add two account amount.
+
+
+class Account
+{
+    public int amount;
+    public Account(int amount)
+    {
+        this.amount = amount;
+    }
+
+    public static Account operator + (Account a1, Account a2){
+        return new Account(a1.amount + a2.amount);
+}
+
+    public void display()
+    {
+        Console.WriteLine("Amount " + amount);
+    }
+}
+class Program
+{
+    public static void Main(String[] args)
+    {
+        Account a1 = new Account(50000);
+        a1.display();
+
+        Account a2 = new Account(4000);
+
+        a2.display();
+
+        Console.WriteLine("Now operator overload");
+        Account a3 = a1 + a2;
+        a3.display();
+        Console.ReadKey();
+    }
+}
+
+
+=================  sealed class =======================
+Sealed class is used to restrict the inheritance features of object-oriented 
+programming. 
+
+
+sealed class Test
+{
+    public void display()
+    {
+        Console.WriteLine("This is base class for seladed");
+    }
+}
+
+//class newTest : Test   // throw error as the test class is shielded we cannt inherite it 
+//{
+
+//}
+
+class Program
+{
+    public static void Main(String[] args)
+    {
+        Test t = new Test();
+        t.display();
+    }
+}
+
+
+===========================Boxing and unboxing=========
+
+
+=============================  Boxing =======================
+ Boxing  is process of converting a value type to reference type. 
+Eg. 
+Int, float, character (value type) ---------------------->  object (reference type)
+
+
+class Program
+{
+    public static void Main(String[] args)
+    {
+        int x = 10;
+        Object a = x;  // object is a keyword we must write it 
+        x = 40;
+        Console.WriteLine("Calling value of x   " + x);
+        Console.WriteLine("Call obejct   " + a);
+        Console.ReadKey();
+    }
+}
+ ==========================   Unboxing ========================
+It is process of converting reference type to value type is known as 
+UNBOXING.
+
+
+class program
+{
+    public static void main(String[] args)
+    {
+        int x = 10;
+        Object a = x;  // object is a keyword we must write it . Boxing
+        x = 40;
+        int b = (int)a;  // unboxing
+        Console.WriteLine("Calling value of x   " + x);
+        Console.WriteLine("Call obejct   " + a);
+        Console.WriteLine("after unbox   " + b); // as we unbox the object so the object value will now become int value
+        Console.ReadKey();
+    }
+}
+
+===========================  Generic type =======================
+Generic allow you to write a class or method that can work with any data 
+type. The detailed specification for each collection is found under the 
+System.Collection.Generic namespace. 
+A generic method is declare with generic type parameter list enclosed within 
+angular brackets. 
+
+========= Generic class =============
+Generic class syntax  →  class Name<T>
+
+class Box<T>
+{
+    public T value;
+    public Box(T value)
+    {
+        this.value = value;
+    }
+
+    public void display()
+    {
+        Console.WriteLine("Value = " + value);
+        Console.WriteLine("Value type " + value.GetType());
+    }
+}
+
+class Program
+{
+    public static void Main(String[] args)
+    {
+        Box<int> intBox = new Box<int>(100);
+        Box<string> strngBox = new Box<string>("Bikram Gyawali");
+        Box<double> doubleBox = new Box<double>(22.2);
+
+        intBox.display();
+        strngBox.display();
+        doubleBox.display();
+    }
+}
+
+
+===========  Generic Method =========
+Generic method syntax →  void Method<T>(T param)
+Example to show simple generic method and the swap algorithm implemetation
+
+
+using System.Collections.Generic;
+class Program
+{
+    static  void  display <T>(T value)
+    {
+        Console.WriteLine("Value = "+value);
+        Console.WriteLine("Value of type = " + value.GetType());
+    }
+    
+
+    // for implementing swap method 
+
+    public static  void swap<T>(ref T a , ref T b)
+    {
+        T temp = a;
+        a = b;
+        b =temp; 
+    }
+
+    public static void Main(String[] args)
+    {
+        Console.WriteLine("---- Display Method -----");
+        display<int>(55);   // method is static so we dont need to create instance 
+        display<string>("Bikram Gyawali");
+        display<double>(554.5);
+
+        Console.WriteLine("----- int value   swap -------");
+        int x = 20, y = 30;
+        Console.WriteLine("Before swap  x ={0}  y={1}", x, y);
+
+        swap<int>(ref x, ref y);
+        Console.WriteLine("After swap  x ={0}  y={1}", x, y);
+
+        Console.WriteLine("----- string value   swap -------");
+        string s1 = "Bikram", s2 = "Hari";
+        Console.WriteLine("Before swap  s1 ={0}  s2={1}", s1, s2);
+
+        swap<string>(ref s1, ref s2);
+        Console.WriteLine("Afer swap  s1 ={0}  s2={1}", s1, s2);
+
+        Console.ReadKey();
+    }
+}
+
+
+======================= Queue  ======================
+
+Enqueue  →  add element at rear
+Dequeue  →  remove element from front
+Peek     →  see front element without removing
+Count    →  total elements
+Contains →  check if element exists
+
+WAP to implemet all queue operation
+
+
+using System;
+using System.Collections.Generic;
+
+class Program
+{
+    public static void Main(String[] args)
+    {
+        Queue<int> qu = new Queue<int>();
+
+        Console.WriteLine("Implement Enqeue");
+            qu.Enqueue(1);
+            qu.Enqueue(20);
+            qu.Enqueue(3);
+            qu.Enqueue(50);
+            qu.Enqueue(1);
+
+            Console.WriteLine("Display queue value");
+
+            foreach (int a in qu)
+            {
+                Console.WriteLine(a);
+            }
+            Console.WriteLine("Total Number of items in queue" + qu.Count());
+            Console.WriteLine("Pick the first value of the queue = " + qu.Peek());
+
+        Console.WriteLine("Implement Deqeue");
+        Console.WriteLine("Removed Value = " +qu.Dequeue());
+        Console.WriteLine("Removed Value = " +qu.Dequeue());
+        Console.WriteLine(" After Implement Deqeue");
+
+        foreach(int b in qu)
+        {
+            Console.WriteLine(b);
+        }
+
+        Console.WriteLine("Does queue contains 30 " + qu.Contains(30));
+        Console.WriteLine("Does queue contains 50 " + qu.Contains(50));
+
+        Console.ReadKey();
+
+
+    }
+}
+
+==================== Stack ===============
+Push     →  add element on top
+Pop      →  remove element from top
+Peek     →  see top element without removing
+Count    →  total elements
+Contains →  check if element exists
+
+
+WAP to implement stack
+
+
+using System;
+using System.Collections.Generic;
+
+class Program
+{
+    public static void Main(String[] args)
+    {
+        Stack<string> st = new Stack<string>();
+
+        st.Push("Bikram");
+        st.Push("Hari");
+        st.Push("Ram");
+        st.Push("Shyam");
+
+        Console.WriteLine("items in stack");
+
+        foreach (string a in st) Console.WriteLine(a);
+
+        Console.WriteLine("Total items in stack " + st.Count());
+        Console.WriteLine("First items in stack " + st.Peek());
+
+        Console.WriteLine("Removed : " +st.Pop());
+        Console.WriteLine("Removed : " +st.Pop());
+
+        Console.WriteLine("items in stack after pop");
+
+        foreach (string a in st) Console.WriteLine(a);
+
+        Console.WriteLine("Stack Contain Bikram " + st.Contains("Bikram"));
+        Console.WriteLine("Stack Contain Shyam  " + st.Contains("Shyam"));
+
+        Console.ReadKey();
+    }
+}
+ 
+ == wap to implement undo implemenation 
+
+
+using System;
+using System.Collections.Generic;
+
+class Program
+{
+    public static void Main(String[] args)
+    {
+        Stack <string> st = new Stack<string>();
+        Console.WriteLine("== Implement user actions== \n");
+        st.Push("Typed Hello");
+        Console.WriteLine("Action: Typed Hello");
+        st.Push("Typed hehe");
+        Console.WriteLine("Action: Typed hehe");
+
+        Console.WriteLine("== Undo user actions== \n");
+
+        while (st.Count > 0)
+        {
+            string action = st.Pop();
+            Console.WriteLine("Undo : "+action);
+        }
+        Console.WriteLine("\nNothing left to undo");
+        Console.ReadKey();
+    }
+}
+
+=================== Link List =======
+AddFirst    →  add at beginning
+AddLast     →  add at end
+AddBefore   →  add before a node
+AddAfter    →  add after a node
+Remove      →  remove a node
+RemoveFirst →  remove first node
+RemoveLast  →  remove last node
+Contains    →  check if value exists
+
+
+using System;
+using System.Collections.Generic;
+class Program
+{
+    public static void Main(string[] args)
+    {
+        LinkedList<int> list = new LinkedList<int>();
+
+        Console.WriteLine("Add value in linkedlist");
+
+        list.AddLast(20);
+        list.AddLast(30);
+        list.AddLast(50);
+        list.AddLast(10);
+        list.AddLast(90);
+        list.AddLast(80);
+
+        Console.WriteLine("Elements in linkedlist");
+        foreach (int items in list) Console.Write(items + " ");
+
+        Console.WriteLine("\n First item : " + list.First.Value);
+        Console.WriteLine("\n Last item : " + list.Last.Value);
+        Console.WriteLine("\n Total item : " + list.Count);
+
+        Console.WriteLine("== AddBefore and AddAfter ==");
+
+        Console.WriteLine("Added Element 5 before 20");
+        LinkedListNode<int> node =list.Find(20);
+
+        list.AddBefore(node,5);
+        Console.WriteLine("Added Element 35 after 30");
+        LinkedListNode<int> node2 = list.Find(30);
+
+        list.AddAfter(node2, 35);
+
+        Console.WriteLine("\n After Addition");
+        foreach (int items in list) Console.Write(items + " ");
+
+        
+        Console.WriteLine("\n Remove");
+
+        list.Remove(10);
+        Console.WriteLine("Remove 10");
+        list.RemoveFirst();
+        Console.WriteLine("Remove first item");
+        list.RemoveLast();
+        Console.WriteLine("Remove last item");
+        Console.WriteLine("\n After Remove");
+        foreach (int items in list) Console.Write(items + " ");
+
+        Console.WriteLine("\n ==Contain ==");
+
+        Console.WriteLine("Stack contains 5 ? " + list.Contains(5));
+        Console.WriteLine("Stack contains 35 ? " + list.Contains(35));
+        Console.ReadKey();
+
+    }
+}
+
+*/
