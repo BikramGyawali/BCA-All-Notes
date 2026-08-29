@@ -248,39 +248,39 @@
 
 
 //2d array rectangle  
-/*
-using System;
 
-namespace Program
-{
-    class _2darray
-    {
-        public static void Main(String[] args)
-        {
-            int i, j;
-            int[,] numbers = new int[2, 2];
-            Console.WriteLine("Enter the elements in 2 d array ");
-            for (i = 0; i < numbers.GetLength(0); i++)
-            {
-                for (j = 0; j < numbers.GetLength(1); j++)
-                {
-                    numbers[i, j] = Convert.ToInt32(Console.ReadLine());
-                }
-            }
+//using System;
 
-            //for read 
-            Console.WriteLine("The elements of the array");
-            foreach(int a in numbers)
-            {
-                Console.WriteLine(a);
-            }
-        Console.ReadKey();
-        }
-    }
+//namespace Program
+//{
+//    class _2darray
+//    {
+//        public static void Main(String[] args)
+//        {
+//            int i, j;
+//            int[,] numbers = new int[2, 2];
+//            Console.WriteLine("Enter the elements in 2 d array ");
+//            for (i = 0; i < numbers.GetLength(0); i++)
+//            {
+//                for (j = 0; j < numbers.GetLength(1); j++)
+//                {
+//                    numbers[i, j] = Convert.ToInt32(Console.ReadLine());
+//                }
+//            }
 
-}
+//            //for read 
+//            Console.WriteLine("The elements of the array");
+//            foreach(int a in numbers)
+//            {
+//                Console.WriteLine(a);
+//            }
+//        Console.ReadKey();
+//        }
+//    }
 
-*/
+//}
+
+
 
 
 
@@ -315,7 +315,8 @@ namespace Program
 
 //          public  void displayData()
 //        {
-//            Console.WriteLine("Hello " + name + " Your id is " + id + " and you are " + age + " year old. " + " You are from  " + address);
+//            Console.WriteLine("Hello " + name + " Your id is " + id + "
+//            and you are " + age + " year old. " + " You are from  " + address);
 //        }
 //    }
 
@@ -461,7 +462,8 @@ namespace SimpleInterest
 /*
 example of call by vlaue : this is the default way of call method 
 definition : When you pass a variable to a method,
-C# makes a copy of that value. The method works on the copy. The original variable is completely safe and never touched.
+C# makes a copy of that value. The method works on the copy. 
+The original variable is completely safe and never touched.
 
 using System;
 class program
@@ -479,7 +481,8 @@ class program
     }
 }
 
-Call by reference : Instead of sending a copy, you send the actual memory address of the variable. Whatever the method does to it directly changes your
+Call by reference : Instead of sending a copy, you send the actual memory address 
+of the variable. Whatever the method does to it directly changes your
 original variable.
 
 using System;
@@ -501,11 +504,13 @@ class program
 }
 
 Output parmater :
-Definition : This is like ref but done specially for output.the method fills the variable for you . we dont need to intialize before call 
+Definition : This is like ref but done specially for output.the method 
+fills the variable for you . we dont need to intialize before call 
 in fact the method is required to assign it before returning.
 where to use it : needs to produce multiple results 
 we assign the vlaue inside the method in out but not in the ref and the value;
-and dont assign any value inside the main class in out but iin the ref and the value we assign the value
+and dont assign any value inside the main class in out but iin the ref
+and the value we assign the value
 
 
 
@@ -530,7 +535,8 @@ using System;
 
 calss by params
 definitionn: mthod accept any number of argument of the same types.
-Why it exists: You often don't know at design time how many values will be passed. params removes the need to create an array manually before every call.
+Why it exists: You often don't know at design time how many values will be passed.
+params removes the need to create an array manually before every call.
  we can pass any number of the parameter we dont need to assign the array
 
 
@@ -656,7 +662,8 @@ namespace simpleInheritance
 */
 
 
-/* write a program to base class name employe has salary 35000 and who is manager get bonus 20000 per month. uisng inheritance
+/* write a program to base class name employe has salary 35000 and 
+ * who is manager get bonus 20000 per month. uisng inheritance
 
 using System;
 namespace example
@@ -734,12 +741,11 @@ namespace defaultConstructor
 
 ii. Instance/Paramterize Constructor
 
-using System.Xml.Serialization;
 
 public class program
 {
     int x, y;
-    program(int a,int b)
+  public  program(int a,int b)
     {
         x = a;
         y = b;
@@ -796,7 +802,8 @@ class program
     }
     static program()
     {
-        Console.WriteLine("Run for one time when the instance of class is created \n Dont accept any access modifier");
+        Console.WriteLine("Run for one time when the instance of class is created \n 
+        Dont accept any access modifier");
 
     }
 
@@ -949,7 +956,8 @@ public class detail {
 
     public void display()
     {
-        Console.WriteLine("Your nam is {0} and your age is {1}. You are from {2}", name, age, address);
+        Console.WriteLine("Your nam is {0} and your age is {1}. 
+You are from {2}", name, age, address);
     }
 }
 
@@ -963,7 +971,8 @@ internal class program
 
         Console.WriteLine("Enter your name , age  and addresss one by one");
         d.sName = Console.ReadLine();
-        d.age=Convert.ToInt32(Console.ReadLine()); // or we can write d.age=int.Parse(Console.ReadLine());
+        d.age=Convert.ToInt32(Console.ReadLine()); // or we can write 
+d.age=int.Parse(Console.ReadLine());
         d.address = Console.ReadLine();
         d.display();
         Console.ReadKey();
@@ -1122,8 +1131,10 @@ class program
 {
     public static void Main(String[] agrs)
     {
-        detail.name = "Bikram Gyawali";   // we dont need to creat the object  fo the staic class 
-        detail.age = 20;   // the member of the static clsss must ne static to be access by other class 
+        detail.name = "Bikram Gyawali";   // we dont need to creat the object 
+fo the staic class 
+        detail.age = 20;   // the member of the static clsss must be 
+static to be access by other class 
         detail.show();
         Console.ReadKey();
     }
@@ -1170,7 +1181,6 @@ class program
  this doesnt suppport inheritance
 
 
-using System.Xml.Linq;
 
 struct student
 {
@@ -1196,7 +1206,8 @@ class program
 
 =========================== base keyword=======
 base is a keyword that refers to the parent class (base class) from inside a child class. 
-It lets you access the parent's members that are hidden or overridden by the child. 3 use of base class
+It lets you access the parent's members that are hidden or overridden by the child. 
+3 use of base class
 
     1. call parent class method
     2. call parent class constructor
@@ -1226,7 +1237,8 @@ public class person
 public class student : person
 {
     public int id;
-    public student(int id,int age,string name) : base(age, name)//this call the parent constructor and set value of age and name
+    public student(int id,int age,string name) : base(age, name)//this call the 
+parent constructor and set value of age and name
     {
         this.id = id;
             Console.WriteLine("Call person constructor");
@@ -1389,7 +1401,8 @@ class Program
 
 ========  abstract class and method =====
 
-we cannt create a object for the abstract class because it may include the abstract method without implementation
+we cannt create a object for the abstract class because it may include the abstract
+method without implementation
 
 
 
@@ -1433,7 +1446,8 @@ class Circle : Shape
 
 1.  Write a program to implement abstraction using an abstract class
 BankAccount with appropriate abstract properties and methods.
-Create suitable derived classes to calculate interest for different account types and display the results.
+Create suitable derived classes to calculate interest for different account types and 
+display the results.
 
 
 
@@ -1485,7 +1499,8 @@ class program
     public static void Main(String[] args)
     {
         BankAccount ba = new SavingAccount();  // we cannt create the class of abstract class
-                                               // so we create object of inheritate class . this is also called upcasting
+                                               // so we create object of inheritate class .
+this is also called upcasting
         Console.WriteLine("Account Type " + ba.AccountType);
         Console.WriteLine("Interest amount " + ba.CalculateInterest(1000));
 
@@ -1520,7 +1535,7 @@ class Esewa : IPayment
     }
 }
 
-class Khalti : IPayment
+class  Khalti : IPayment
 {
     public  void Payment(double amount)
     {
@@ -1638,7 +1653,8 @@ class program
 
 
 =================== method overridding ===============
- there must be virtual keyword in base class method and override keyword in the derive class method
+ there must be virtual keyword in base class method and override keyword 
+in the derive class method
 1. WAP to implement a notification system using the  methodoveride
 
 
@@ -1754,7 +1770,8 @@ class Program
         //Dog d = new Dog();
         //Animal a = d;    // upcasting
         //a.eat();
-        ////a.bark();   the animal is a reference and the method is inside the dog so it will throw error 
+        ////a.bark();   the animal is a reference and the method is inside the dog so 
+        ///it will throw error 
         //d.bark(); // this work as we have the object of the dog as d refernce
         //downcast
 
@@ -1830,7 +1847,8 @@ class counter
 
    
 
-    public static  counter operator ++(counter c)  // we can put any name in the object of the counter like (counter cccc)
+    public static  counter operator ++(counter c)  // we can put any name in the object of the 
+counter like (counter cccc)
     {
         return new counter(c.x++);
     }
@@ -2327,4 +2345,1047 @@ class Program
     }
 }
 
+
+
+
+===================  Chapter 4 advance c# ====
+
+========== Delegate =======
+
+syntax: <access modifier> delegate <return type>  <delegate name>(parameter);
+* delegate and the method has the same signature
+came under System.Delegate class
+
+##Wap to implement a delegate example program
+
+
+using System;  
+class Program
+{
+        public delegate void DelegateProgram(string text);
+        public static void upper(string a)
+        {
+            Console.WriteLine("Text in upper case " + a.ToUpper());
+        }
+        public static void lower(string b)
+        {
+            Console.WriteLine("Text in lower case " + b.ToLower());
+        }
+    
+    public static void Main(String[] args)
+    {
+        DelegateProgram d;
+        d = new DelegateProgram(upper);
+        Console.WriteLine("--Upper --");
+        d("Hello hehe");
+        d = new DelegateProgram(lower);
+        Console.WriteLine("--Lower --");
+        d("Hello Bikram");
+        Console.ReadKey();
+    }
+}
+
+## WAP to find square of number using delegate
+
+
+using System;
+
+class Program
+{
+    public delegate int DelegateSquare(int n);
+    
+    public static int square(int n)
+    {
+        return n* n;
+    }
+    public static void Main(String[] args)
+    {
+        DelegateSquare de = new DelegateSquare(square);
+        Console.WriteLine("The square of number is " + de(3));
+        Console.ReadKey();
+    }
+}
+
+## wap to implement a simple calculator using the  delegate 
+
+
+using System;
+class program
+{
+    public delegate int DelegateCal(int a, int b);
+
+    public static int sum(int a, int b) { return a + b; }
+    public static int diff(int a, int b) { return a - b; }
+    public static int mul(int a, int b) { return a * b; }
+
+    public static void Main(String[] args)
+    {
+        DelegateCal d;
+        d = new DelegateCal(sum);
+        Console.WriteLine("The sum result " + d(5, 7));
+        d = new DelegateCal(diff);
+        Console.WriteLine("The diff result " + d(50, 7));
+        d = new DelegateCal(mul);
+        Console.WriteLine("The mul result " + d(7, 7));
+        Console.ReadKey();
+
+    }
+}
+
+=== multidelegate  ====
+
+
+using System;
+
+class program
+{
+    public delegate void Calculate(int a, int b);
+
+    public static void Add(int a , int b)
+    {
+        Console.WriteLine("The sum is " + (a + b));
+    }
+    public static void Sub(int a, int b)
+    {
+        Console.WriteLine("The difference is " + (a - b));
+    }
+
+    public static void Mul(int a,int b)
+    {
+        Console.WriteLine("The mul is " + (a * b));
+    }
+
+   public static void Main(String[] args)
+    {
+        Calculate cl = new Calculate(Add);
+        cl += Sub;
+        cl += Mul;
+        cl(20, 30);
+        Console.ReadKey();
+    }
+}
+
+## Imagine a student submits an exam form. After the submission, the system performs several 
+actions automatically. The student’s information is first saved in the database to record the 
+application. Then, an SMS is sent to the student confirming that the form has been 
+successfully submitted. At the same time, an email notification is also sent with the same 
+confirmation details. 
+
+
+class Program
+{
+    public delegate void Student();
+
+    public static void SMS()
+    {
+        Console.WriteLine("Send message");
+
+    }
+
+    public static void Email(){
+        Console.WriteLine("Email message");
+    }
+
+    public static void SaveRecord()
+    {
+        Console.WriteLine("Record save to database");
+    }
+
+    public static void Main(String[] args)
+    {
+        Student s = new Student(SMS);
+        s += Email;
+        s += SaveRecord;
+        //s() invoke delegate
+        s.Invoke(); // invoke delegate
+
+
+        // revoke the delegate
+        Console.WriteLine("\n\nafter Reinvoke the email is removed\n\n");
+        s -= Email;
+        s.Invoke();
+
+        Console.ReadKey();
+    }
+}
+
+======  Event in C# =====
+Defining an event is a two-step process. 
+❖ First you need to defining a delegate type that will hold the list of methods to 
+be called when the event is fired. 
+❖ Next, you declare an event using the event keyword. 
+
+how event work
+Step 1  →  declare a delegate
+Step 2  →  declare an event using that delegate
+Step 3  →  subscribe to the event using +=
+Step 4  →  fire the event when something happens
+
+## wap to implement a event inside a single class
+
+
+class program
+{
+    public  delegate void DelegateExp();
+    public static event DelegateExp EventExp;  // we should make it static if we define 
+it inside the main class
+
+    public  static void eventClick()
+    {
+        Console.WriteLine("Event Clicked");
+        if(EventExp != null)
+        {
+            EventExp();
+        }
+        else
+        {
+            Console.WriteLine("No subscriber");
+        }
+    }
+
+    static void ChangeMessage()
+    {
+        Console.WriteLine("The event change the message");
+    }
+
+    static void ChangeColor()
+    {
+        Console.WriteLine("The background is change");
+    }
+
+    public static void Main(String[] args)
+    {
+        eventClick(); // this show no subscriber
+        EventExp += ChangeColor;
+        EventExp += ChangeMessage;
+        EventExp.Invoke();
+    }
+}
+
+## implement event in 2 different class
+
+
+class Example
+{
+    public delegate void ExampleDelegate();
+    public ExampleDelegate del;  // this is delegate
+    public event ExampleDelegate onClick;  // onclick is just a variable we can replace it 
+with other names
+    public void clickEvent()
+    {
+        Console.WriteLine("The event is clicked");
+        if (onClick != null) onClick();
+    }
+}
+class program
+{
+    static void ChangeMessage()
+    {
+        Console.WriteLine("Change the message");
+    }
+
+    static void ChangeColor()
+    {
+        Console.WriteLine("Change color");
+    }
+
+    public static void Main(String[] args)
+    {
+
+        Example e = new Example();
+
+        //for delegate
+        Console.WriteLine("----Call from the delegate -----");
+        e.del += ChangeMessage;
+        e.del();  // we can call delegate from outside of the class
+
+        //for event
+
+        Console.WriteLine("----Call from the event -----");
+        e.onClick += ChangeMessage;
+        e.onClick += ChangeColor;
+    
+        //e.onClick(); it will throw error as we cannt call event outside the class 
+so we call the method
+
+        e.clickEvent();
+
+        Console.WriteLine("---after Reinvoke in event----");
+        e.onClick-= ChangeMessage;
+        e.clickEvent();
+        Console.ReadKey();
+    }
+}
+
+
+==Anomous function/method ====
+Syntax: 
+delegate  (parameter_list) 
+{ 
+//code here 
+};
+
+## wap to add any two numbers using the anomous function
+
+
+using System;
+
+class ProgramP
+{
+    public delegate int Calculate(int a, int b);
+
+    public static void Main(String[] args)
+    {
+        Calculate add = delegate (int a, int b)
+        {
+            return a + b;
+        };
+        Console.WriteLine("The sum ="+ add(2, 3));
+        Console.WriteLine("The sum ="+ add(20, 3));
+        Console.ReadKey();
+    }
+}
+
+
+====== Lambda====
+Expression Lambda: Consists of the input and the expression. 
+Syntax: 
+Input=>expression; 
+ 
+❖ Statement Lambda: Consists of the input and a set of statements to be 
+executed. It can be used along the delegates. 
+ 
+Syntax: 
+Input =>{statements};
+
+## wap a simple program to show the use of the lambda expression
+
+
+using System;
+class Program
+{
+    public static int test() => 20;
+    public static int sum(int x) => x + 20;
+
+    public static void Main(String[] args)
+    {
+        int x = test();
+        Console.WriteLine("The result is " + sum(x));
+        Console.ReadKey();
+    }
+
+}
+
+##  use the lambda express to sum 2 number and show your name in upppercase
+
+
+class Program
+{
+    delegate int Sum(int x, int y);
+    delegate  string Name(string name);
+    delegate void  Address(string address);
+    public static void Main(String[] args)
+    {
+        Sum add = (x, y) => x + y;
+        Name upperCase = (name) =>  name.ToUpper();
+        Address a = address => Console.WriteLine("You live in " + address);
+
+        // for sum 
+        Console.WriteLine("Enter first number");
+        int n1 = Convert.ToInt16(Console.ReadLine());
+        Console.WriteLine("Enter second number");
+        int n2 = int.Parse(Console.ReadLine());
+
+        Console.WriteLine("Sum of fix digit " + add(2, 3));
+        Console.WriteLine("Sum is of user input " + add(n1, n2));
+        // for upper case
+        Console.WriteLine("Enter your name");
+        string uname = Console.ReadLine();
+        Console.WriteLine("{0} in uppercase is = {1}", uname, upperCase(uname));
+
+        Console.WriteLine("User predefine address as kathmandu");
+
+        a("Kathmandu");
+        Console.ReadKey();
+
+    }
+}
+
+====== Exception Handling =====
+
+## wap to implement dividebyzero exception
+
+
+class program
+{
+ public static void Main(String[] args)
+    {
+        Console.WriteLine("Enter first number");
+        int n1 =int.Parse(Console.ReadLine());
+        Console.WriteLine("Enter second number");
+        int n2 = int.Parse(Console.ReadLine()); // we can use Conver.ToInt32 or other 
+it will not throw error
+        try
+        {
+            int result = n1 / n2;
+            Console.WriteLine("The result is " + result);
+        }catch(DivideByZeroException ex)
+        {
+            Console.WriteLine("Enter 2nd number greater than 0 " );
+            Console.WriteLine(ex.Message);
+        }
+        catch (Exception e)  // this will work for every type of expection
+        {
+            Console.WriteLine(e.Message);
+        }
+        finally
+        {
+            Console.WriteLine("Run everytime");
+        }
+        Console.ReadKey  ();
+    }
+}
+
+
+==============  implement the throw exception ======
+
+
+class Program
+{
+    public static void Main(String[] args)
+    {
+        try
+        {
+            Console.WriteLine("Enter your age");
+            int age = int.Parse(Console.ReadLine());
+
+            if(age<0 || age > 20)
+            {
+                throw new Exception("Enter a valid age");
+            }
+            Console.WriteLine("Your age is " + age);
+        } catch(Exception ex)
+        {
+            Console.WriteLine(ex.Message);
+        }
+        Console.ReadKey();
+    }
+}
+
+
+========  LINQ (Language integrated query) ========
+System.Linq provides:
+Select    →  pick specific property from each item
+Where     →  filter items by condition
+OrderBy   →  sort items
+Count     →  count items
+First     →  get first item
+Any       →  check if any item matches
+
+System.Collections.Generic provides:
+List<T>   →  the list itself
+
+## WAP to implement lambda in linq to  find the even number from a list
+
+
+using System;
+using System.Collections.Generic;
+
+class Program
+{
+    // if we dont use lambda then we have to do like this 
+   //public static bool isEven(int n)
+   // {
+   //     return n %2==0;
+   // }
+    public static void Main(String[] args)  
+    {
+        List<int> numbers = new List<int>() { 3, 2, 5, 16, 77, 32 };
+        var result = numbers.FindAll(x => x % 2 == 0);  // var will determine the datatype automatically
+List<int> result = numbers.FindAll(x => x % 2 == 0);  // we can use this line insted of the var
+        //List<int> result = numbers.FindAll(isEven);  this is for without lambda
+
+        Console.WriteLine("List of even number");
+        foreach (int n in result) Console.Write("\t" + n);
+    
+    Console.ReadKey();
+    }
+}
+
+#####  WAP to display names of all animals from a list and 
+arrange in ascending or descending using LINQ and lambda. 
+
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+
+class Animal
+{
+    public string Name { get; set; }
+    public int Age { get; set; }
+}
+
+class Program
+{
+    public static void Main(String[] args)
+    {
+var animal = new Animal[]{  // can use this method
+new Animal{Name="Horse",Age=22},
+        new Animal{Name="Dog" , Age=8},
+        new Animal{Name="Cat",Age=3}
+
+};
+
+        List<Animal> animal = new List<Animal>()// we pass the object in the list as Animal
+        {
+
+        new Animal{Name="Horse",Age=22},
+        new Animal{Name="Dog" , Age=8},
+        new Animal{Name="Cat",Age=3}
+
+        };
+
+        var showName = animal.Select(a => a.Name); // the var will automatically 
+take the value of datatype
+
+        // to display the name
+
+        foreach (var name in showName) Console.WriteLine("\t" + name);
+
+        // for descending
+
+        //var age = animal.OrderByDescending(a => a.Age);  // for descending
+        var age = animal.OrderBy(a => a.Age);  // for ascending
+        foreach (var a in age)
+        {
+            Console.WriteLine("Animal {0} age = {1}" , a.Name, a.Age);
+                };
+        Console.ReadKey();
+
+    }
+}   
+
+### WAP to implement where operation of linq 
+Where() is used to filter data based on a condition.
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+
+class Program
+{
+    public static void Main(String[] args)
+    {
+        List<int> numbers = new List<int>() { 3, 24, 25, 23, 2 };
+        var numbers = new List<int>() { 3, 24, 25, 23, 2 };
+        var evenNumber = numbers.Where(x => x % 2 == 0);
+        foreach (int x in evenNumber) Console.Write("\t"+x);
+        Console.ReadKey();
+    }
+}
+
+
+### WAP to implement Join Operation in Linq
+Join() combines two lists based on a common key.
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+
+class Order
+{
+    public int Id { get; set; }
+    public int CustomerId {  get; set; }
+    public string ProductName {  get; set; }
+}
+
+class Customer
+{
+    public int Id { get; set; }
+    public String Name { get; set; }
+}
+
+class Program
+{
+    public static void Main(String[] args)
+    {
+        List<Order> orders = new List<Order>()
+        {
+            new Order{Id=1, CustomerId=1,ProductName="Mac book"},
+            new Order{Id=2, CustomerId=1,ProductName="lenevo book"},
+            new Order{Id=3, CustomerId=2,ProductName="Iphone"},
+            new Order{Id=4, CustomerId=3,ProductName="Mac book"},
+
+        };
+
+        var customers = new Customer[]  // we can use this method also of array
+        {
+            new Customer{Id=1,Name="Vikram"},
+            new Customer{Id=2,Name="Hari"},
+            new Customer {Id=3,Name="Sankalpa"}
+        };
+
+        var result = from c in customers
+                     join o in orders
+                     on c.Id equals o.CustomerId
+                     select new { c.Id, c.Name, o.ProductName };
+
+        foreach(var res in result)
+        {
+            Console.WriteLine("Customer id = {0} Customer Name = {1} buys" +
+                " Product Name = {2}", res.Id, res.Name, res.ProductName);
+        }
+        Console.ReadKey();
+
+    }
+}
+
+
+### WAP to implement concat in linq
+Concat() combines two lists and keeps duplicates.
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+
+class Program
+{
+    public static void Main(String[] args)
+    {
+        var number1 = new List<int>() { 3, 24, 2, 45, 2 }; // can use var and List<int> both 
+        List<int> number2 = new List<int>() { 5,64,2,9,6 };
+
+        var result = number1.Concat(number2);
+
+        foreach(var res in result)
+        {
+            Console.WriteLine(res);
+        }
+        Console.ReadKey();
+    }
+}
+
+### WAP to implement union operation in linq
+Union() lists and remove duplicate
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+
+class Program
+{
+    public static void Main(String[] args)
+    {
+        var number1 = new List<int>() { 3, 24, 2, 45, 2 }; // can use var and List<int> both 
+        //List<int> number2 = new List<int>() { 5, 64, 2, 9, 6 };
+var number2 = new int[] { 5, 64, 2, 9, 6 };
+
+        var result = number1.Union(number2);
+
+        foreach (var res in result)
+        {
+            Console.WriteLine(res);
+        }
+        Console.ReadKey();
+    }
+}
+
+## WAP to implement GroupBy operation in linq group students according to their department
+GroupBy() groups similar data together.
+
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+
+class Student
+{
+    public string Name { get; set; }
+    public string DepartmentName { get; set; }
+}
+
+class Program
+{
+    public static void Main(String[] args)
+    {
+        var student = new Student[]
+        {
+            new Student{Name="Bikram",DepartmentName="BCA"},
+            new Student{Name="Hari",DepartmentName="BCA"},
+            new Student{Name="Ram",DepartmentName="BBA"},
+            new Student{Name="Sita",DepartmentName="BBA"},
+        };
+
+        var groups = student.GroupBy(x => x.DepartmentName);
+
+        foreach(var group in groups)
+        {
+            Console.WriteLine("Department: " + group.Key);
+            foreach ( var sname in group)
+            {
+                Console.WriteLine(sname.Name);
+            }
+        }
+        Console.ReadKey();
+    }
+}
+
+=== code for asp web form ===
+
+Syntax of asp follow Pascal case (eg :  TextBox)
+ == for label==
+<asp:Label ID="label1" runat="server" Text:"Hello"> </asp:label>
+
+==for textbox===
+<asp:TextBox ID="textbox" runat="server"> </asp:TextBox>
+
+===for dropdownlist ====
+<asp:DropDownList ID="ddp" runat="server">
+<asp:ListItem Text="color" Value="red" />
+<asp:ListItem Text="green" Value="Green"/>
+</asp:DropDownList>
+
+
+==== for radio button ===
+<asp:RadioButton ID="rd1" Text="Male" GroupName="Gender" Value="Male" runat="server"/>
+
+==for checkbox ===
+<asp:CheckBox ID="cb1" Text="Agrees terms"  runat="server" />
+
+==for button ==
+<asp:Button ID="btn1" Text="Submit" runat="server" OnClick="btn_submit" />
+
+== for comparevalidator ==
+ControlToValidate  →  the control being validated
+ControlToCompare   →  the control to compare against
+Operator           →  Equal, NotEqual, GreaterThan, LessThan etc
+Type               →  String, Integer, Double, Date, Currency
+ErrorMessage       →  message shown when validation fails
+Display            →  Static, Dynamic, None
+
+
+
+
+
+======= 2020 paper ==
+
+4.What do you mean by property in C# language? 
+How it is different from method? Compare automatic 
+property with other types of property with suitable example.
+
+
+using System;
+
+public class Student
+{
+    private string name;
+    private int age = 20;
+    private string address;
+    // read -write property
+    public String AcessName
+    {
+        get { return name; }
+        set { name = value; }
+    }
+
+
+    // read only property 
+    public int AccessAge
+    {
+        get { return age; }
+    }
+
+    // write only property
+
+    public string AssignAddress
+    {
+        set
+        {
+            address = value;
+        }
+    }
+
+    //automatic property
+    public int AssineId
+    {
+        get;
+        set;
+    }
+
+
+    public void info()
+    {
+        Console.WriteLine("Id = {0} and Name is ={1} with age of ={2} from ={3}",
+            AssineId, name,age,address);
+
+        //Console.WriteLine(AssignAddress) // throw error since the assignaddress has set only not get
+
+    }
+
+}
+
+public class Program
+{
+    public static void Main(String[] args)
+    {
+        Student s = new Student();
+        s.AcessName = "Bikram";
+        s.AssineId = 22;
+
+        s.AssignAddress = "Kathmandu";
+        s.info();
+        Console.ReadKey();
+    }
+}
+
+
+5.Define constructor. Explain different types of constructors used in C# with example.
+
+
+using System;
+
+class Add
+{
+    // 1. default constructor
+    int a, b;
+
+    public Add()
+    {
+        a = 20;
+        b = 30;
+    }
+
+    // 2.  parametrize / instance constructor
+
+    public Add(int x , int y)
+    {
+        int sum = x + y;
+        Console.WriteLine("Output from paramterize constructor" + sum);
+    }
+
+    // 3.  over load constructor as already one add with 2 paramter now i create Add with 3 paramter
+
+    public Add(int x,int y, int z)
+    {
+        int sum = x + y + z;
+        Console.WriteLine("Output from overload constructor" + sum);
+    }
+
+    // 4. static constructor run only once  with no parameter,return type and access modifier
+
+    static Add()
+    {
+        Console.WriteLine("Run from static constructor");
+    }
+
+    public static void Main(String[] args)
+    {
+        // for default and static
+
+        Add A = new Add();
+        int sum = A.a + A.b;  // require main class in same class
+        Console.WriteLine("sum for default constructor" + sum);
+
+        //for paramterized
+        new Add(3, 4);
+
+        //for overload
+        new Add(3, 4, 5);
+
+        Console.ReadKey();
+    }
+}
+
+
+6.a) What is LINQ? Write a program to select employees whose salary is 
+greater than 20000 and whose address is kathmandu using LINQ
+b) Write a C# program to show insert and select operation in database.
+
+
+using System;
+using System.Linq;
+
+class Employee
+{
+    public string Name { get; set; }
+    public int Salary { get; set; }
+
+    public string Address { get; set; }
+}
+class Program
+{
+    public static void Main(String[] args)
+    {
+        var emp = new Employee[]
+        {
+            new Employee{Name="Bikram",Salary=30000,Address="Kathmandu"},
+            new Employee{Name="Ram",Salary=10000,Address="Kathmandu"},
+            new Employee{Name="Hari" ,Salary=40000,Address="Butwal"},
+            new Employee{Name="sita" ,Salary=40000,Address="Kathmandu"},
+            new Employee{Name="gita" ,Salary=4000,Address="Palpa"},
+
+        };
+
+        var result = emp.Where(ep => ep.Salary >= 20000 && ep.Address == "Kathmandu");
+
+        foreach(var res in result)
+        {
+            Console.WriteLine("Name = {0} , Salary ={1} , Address = {2} ", res.Name, res.Salary, res.Address);
+        }
+        Console.ReadKey();
+    }
+} 
+
+
+=========== enum example ==========
+
+
+using System;
+enum Day
+{
+    Monday,
+    Tuesday,
+    Wednesday,
+    Thursday,
+    Friday,
+    Saturday,
+    Sunday
+
+}
+
+class Program
+{
+    public static void Main(String[] args)
+    {   
+        Day today = Day.Monday;  // we use day not string or int the name of the enum is used 
+        Console.WriteLine("Today day is "+ today);
+    }
+}
+
+== 3.What is optional parameter? Write a C# program which stores values in 
+two enumerations, Department and College. 
+It uses two functions to display the data contained in Department and College enumerations.
+
+
+
+enum Department
+{
+    computer,
+    science,
+    math
+}
+
+enum College
+{
+    smc,
+    kmc
+}
+
+class Program
+{
+
+    public static void DisplayDepartment()
+    {
+        Console.WriteLine("Department \n");
+        foreach (Department d in Enum.GetValues(typeof(Department)))
+        {
+
+        Console.WriteLine(d);
+        }
+    }
+
+    static void DisplayCollege()
+    {
+        Console.WriteLine("\n College ");
+        foreach (College c in Enum.GetValues(typeof(College)))
+        {
+
+        Console.WriteLine(c);
+        }
+    }
+
+    public static void Main(String[] args)
+    {
+        DisplayDepartment();
+        DisplayCollege();
+    }
+}
+
+
+===== custom exception===
+
+
+using System;
+using System.Data;
+using System.Reflection.Emit;
+using System.Xml.Linq;
+
+public class AgeExp : Exception
+{
+    public  AgeExp(string msg):base(msg){
+
+    }
+}
+
+class Program
+{
+    public static void Main(String[] args)
+    {
+        Console.WriteLine("Enter your age");
+        int age = int.Parse(Console.ReadLine());
+        try
+        {
+            if(age<=10 || age >= 100)
+            {
+                throw new AgeExp("Enter a valid age");
+            }
+            Console.WriteLine("valid");
+        }
+        catch(AgeExp e)
+        {
+            Console.WriteLine(e.Message);
+        }
+        
+    }
+}
+
 */
+
+
+
+class score
+{
+   public  int[][] marks = new int[][]
+    {
+        new int[]{10,20},
+        new int []{20,30,40},
+    };
+    public  void display()
+    {
+        foreach(int[] student in marks)
+        {
+            Console.WriteLine("Marks of students");
+           int total = 0;
+            foreach(int num in student)
+            {
+                Console.WriteLine("\t" + num);
+                total += num;
+            }
+
+            int nums = student.Length;
+            int avg = total / nums;
+            Console.WriteLine(avg);
+        }
+    }
+}
+
+
+class program
+{
+    public static void Main(String[] args)
+    {
+        score s = new score();
+        s.display();
+    }
+}
