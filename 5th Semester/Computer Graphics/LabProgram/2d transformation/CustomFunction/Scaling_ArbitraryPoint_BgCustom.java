@@ -1,22 +1,15 @@
 package CustomFunction;
-
 import package2D.BGhelperPackage;
 import java.util.Scanner;
 
 public class Scaling_ArbitraryPoint_BgCustom {
-
 	private int Xa, Ya, Xb, Yb, Xc, Yc;
-
 	private int Xf, Yf;
-
 	private double Sx, Sy;
 
 	public void BGHehe() {
-
 		Scanner sa = new Scanner(System.in);
-
 		BGhelperPackage bg = new BGhelperPackage();
-
 		bg.inputCoordinate(sa);
 
 		Xa = bg.Xa;
@@ -59,34 +52,18 @@ public class Scaling_ArbitraryPoint_BgCustom {
 				Xb_Naya, Yb_Naya,
 				Xc_Naya, Yc_Naya);
 
-		BGhelperPackage.createFrame(
-				"Scaling about Arbitrary Point - Custom Function",
-				AshliPanel);
+		BGhelperPackage.createFrame("Scaling about Arbitrary Point - Custom Function", AshliPanel);
 	}
 
-	public int BGScalingX(
-			int Xa,
-			int Xf,
-			double Sx) {
-
-		return (int) Math.round(
-
-				Xf + (Xa - Xf) * Sx);
+	public int BGScalingX(int Xa, int Xf, double Sx) {
+		return (int) Math.round(Xf + (Xa - Xf) * Sx);
 	}
 
-	public int BGScalingY(
-			int Ya,
-			int Yf,
-			double Sy) {
-
-		return (int) Math.round(
-
-				Yf + (Ya - Yf) * Sy);
+	public int BGScalingY(int Ya, int Yf, double Sy) {
+		return (int) Math.round(Yf + (Ya - Yf) * Sy);
 	}
 
 	public static void main(String[] args) {
-
 		new Scaling_ArbitraryPoint_BgCustom().BGHehe();
 	}
-
 }

@@ -1,5 +1,4 @@
-package CustomFunction;
-
+This is a See, we don't like it on, though.package CustomFunction;
 import package2D.BGhelperPackage;
 import java.util.Scanner;
 
