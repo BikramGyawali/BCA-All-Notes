@@ -22,9 +22,7 @@ public class Reflection_XYPlane3D_BgLibrary {
 
 		BGhelperPackage3D.CustomPanel3D AshliPanel = new BGhelperPackage3D.CustomPanel3D(BGOriginal, BGTransformed);
 
-		BGhelperPackage3D.createFrame(
-				"Reflection Along XY Plane - Library Function With Bikram",
-				AshliPanel);
+		BGhelperPackage3D.createFrame("Reflection Along XY Plane - Library Function With Bikram",AshliPanel);
 	}
 
 	public static void main(String[] args) {

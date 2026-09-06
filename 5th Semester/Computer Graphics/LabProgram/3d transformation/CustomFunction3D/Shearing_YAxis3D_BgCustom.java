@@ -1,5 +1,4 @@
 package CustomFunction3D;
-
 import package3D.BGhelperPackage3D;
 import java.util.Scanner;
 

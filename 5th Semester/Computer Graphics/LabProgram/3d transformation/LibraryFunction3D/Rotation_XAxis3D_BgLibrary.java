@@ -1,5 +1,4 @@
 package LibraryFunction3D;
-
 import package3D.BGhelperPackage3D;
 import package3D.BGhelper3DLibrary;
 import java.util.Scanner;

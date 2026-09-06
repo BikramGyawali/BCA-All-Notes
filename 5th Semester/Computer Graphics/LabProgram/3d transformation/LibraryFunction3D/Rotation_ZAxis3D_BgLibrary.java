@@ -1,5 +1,4 @@
 package LibraryFunction3D;
-
 import package3D.BGhelperPackage3D;
 import package3D.BGhelper3DLibrary;
 import java.util.Scanner;
@@ -25,9 +24,7 @@ public class Rotation_ZAxis3D_BgLibrary {
 
 		BGhelperPackage3D.CustomPanel3D AshliPanel = new BGhelperPackage3D.CustomPanel3D(BGOriginal, BGTransformed);
 
-		BGhelperPackage3D.createFrame(
-				"3D Rotation Along Z-Axis - Library Function With Bikram",
-				AshliPanel);
+		BGhelperPackage3D.createFrame("3D Rotation Along Z-Axis - Library Function With Bikram", AshliPanel);
 	}
 
 	public static void main(String[] args) {

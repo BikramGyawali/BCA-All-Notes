@@ -1,5 +1,4 @@
 package CustomFunction3D;
-
 import package3D.BGhelperPackage3D;
 import java.util.Scanner;
 
@@ -12,7 +11,6 @@ public class Reflection_ZXPlane3D_BgCustom {
             BGTransformed[Bikram][1]=-BGOriginal[Bikram][1];
             BGTransformed[Bikram][2]=BGOriginal[Bikram][2];
         }
-
         return BGTransformed;
     }
 

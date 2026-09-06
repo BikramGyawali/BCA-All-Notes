@@ -1,5 +1,4 @@
 package CustomFunction3D;
-
 import package3D.BGhelperPackage3D;
 import java.util.Scanner;
 
@@ -16,7 +15,6 @@ public class Shearing_ZAxis3D_BgCustom {
 			BGTransformed[Bikram][1] = Y + b * Z;
 			BGTransformed[Bikram][2] = Z;
 		}
-
 		return BGTransformed;
 	}
 
