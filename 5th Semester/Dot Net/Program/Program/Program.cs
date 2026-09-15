@@ -3354,38 +3354,125 @@ class Program
 
 
 
-class score
+//class score
+//{
+//   public  int[][] marks = new int[][]
+//    {
+//        new int[]{10,20},
+//        new int []{20,30,40},
+//    };
+//    public  void display()
+//    {
+//        foreach(int[] student in marks)
+//        {
+//            Console.WriteLine("Marks of students");
+//           int total = 0;
+//            foreach(int num in student)
+//            {
+//                Console.WriteLine("\t" + num);
+//                total += num;
+//            }
+
+//            int nums = student.Length;
+//            int avg = total / nums;
+//            Console.WriteLine(avg);
+//        }
+//    }
+//}
+
+
+//class program
+//{
+//    public static void Main(String[] args)
+//    {
+//        score s = new score();
+//        s.display();
+//    }
+//}
+
+using System;
+using System.Data.SqlClient;
+
+class Program
 {
-   public  int[][] marks = new int[][]
+    static void Main()
     {
-        new int[]{10,20},
-        new int []{20,30,40},
-    };
-    public  void display()
-    {
-        foreach(int[] student in marks)
+        string conString =
+            @"Data Source=.\SQLEXPRESS;
+              Initial Catalog=dotnet5thsem;
+              Integrated Security=True";
+
+        SqlConnection con = new SqlConnection(conString);
+
+        // ---------------- INSERT ----------------
+        string insertQuery =
+            "INSERT INTO Users(Name, Password) VALUES (@name, @password)";
+
+        SqlCommand insertCmd = new SqlCommand(insertQuery, con);
+
+        insertCmd.Parameters.AddWithValue("@name", "Bikram");
+        insertCmd.Parameters.AddWithValue("@password", "12345");
+
+        con.Open();
+
+        insertCmd.ExecuteNonQuery();
+
+        Console.WriteLine("Record inserted successfully.");
+
+
+        // ---------------- SELECT WITH WHERE ----------------
+        string selectQuery =
+            "SELECT Id, Name, Password FROM Users WHERE Id = @id";
+
+        SqlCommand selectCmd = new SqlCommand(selectQuery, con);
+
+        selectCmd.Parameters.AddWithValue("@id", 1);
+
+        SqlDataReader reader = selectCmd.ExecuteReader();
+
+        Console.WriteLine("\nSelected Record:");
+
+        while (reader.Read())
         {
-            Console.WriteLine("Marks of students");
-           int total = 0;
-            foreach(int num in student)
-            {
-                Console.WriteLine("\t" + num);
-                total += num;
-            }
-
-            int nums = student.Length;
-            int avg = total / nums;
-            Console.WriteLine(avg);
+            Console.WriteLine(
+                "Id = {0}, Name = {1}, Password = {2}",
+                reader["Id"],
+                reader["Name"],
+                reader["Password"]);
         }
-    }
-}
+
+        reader.Close();
 
 
-class program
-{
-    public static void Main(String[] args)
-    {
-        score s = new score();
-        s.display();
+        // ---------------- UPDATE ----------------
+        string updateQuery =
+            "UPDATE Users SET Name=@name, Password=@password WHERE Id=@id";
+
+        SqlCommand updateCmd = new SqlCommand(updateQuery, con);
+
+        updateCmd.Parameters.AddWithValue("@name", "Bikram Gyawali");
+        updateCmd.Parameters.AddWithValue("@password", "67890");
+        updateCmd.Parameters.AddWithValue("@id", 1);
+
+        updateCmd.ExecuteNonQuery();
+
+        Console.WriteLine("\nRecord updated successfully.");
+
+
+        // ---------------- DELETE ----------------
+        string deleteQuery =
+            "DELETE FROM Users WHERE Id=@id";
+
+        SqlCommand deleteCmd = new SqlCommand(deleteQuery, con);
+
+        deleteCmd.Parameters.AddWithValue("@id", 1);
+
+        deleteCmd.ExecuteNonQuery();
+
+        Console.WriteLine("Record deleted successfully.");
+
+        con.Close();
+
+        Console.ReadKey();
     }
 }

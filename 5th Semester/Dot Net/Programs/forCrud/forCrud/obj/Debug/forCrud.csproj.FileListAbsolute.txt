@@ -1,0 +1,7 @@
+E:\Bca-All-Notes\5th Semester\Dot Net\Programs\forCrud\forCrud\bin\Debug\forCrud.exe.config
+E:\Bca-All-Notes\5th Semester\Dot Net\Programs\forCrud\forCrud\bin\Debug\forCrud.exe
+E:\Bca-All-Notes\5th Semester\Dot Net\Programs\forCrud\forCrud\bin\Debug\forCrud.pdb
+E:\Bca-All-Notes\5th Semester\Dot Net\Programs\forCrud\forCrud\obj\Debug\forCrud.csproj.AssemblyReference.cache
+E:\Bca-All-Notes\5th Semester\Dot Net\Programs\forCrud\forCrud\obj\Debug\forCrud.csproj.CoreCompileInputs.cache
+E:\Bca-All-Notes\5th Semester\Dot Net\Programs\forCrud\forCrud\obj\Debug\forCrud.exe
+E:\Bca-All-Notes\5th Semester\Dot Net\Programs\forCrud\forCrud\obj\Debug\forCrud.pdb

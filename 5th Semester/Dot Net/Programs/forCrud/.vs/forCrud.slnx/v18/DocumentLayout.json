@@ -1,0 +1,37 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "E:\\Bca-All-Notes\\5th Semester\\Dot Net\\Programs\\forCrud\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{D27EA9E8-E8CD-4822-8E24-D5E2A2862F2E}|forCrud\\forCrud.csproj|e:\\bca-all-notes\\5th semester\\dot net\\programs\\forcrud\\forcrud\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D27EA9E8-E8CD-4822-8E24-D5E2A2862F2E}|forCrud\\forCrud.csproj|solutionrelative:forcrud\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "E:\\Bca-All-Notes\\5th Semester\\Dot Net\\Programs\\forCrud\\forCrud\\Program.cs",
+              "RelativeDocumentMoniker": "forCrud\\Program.cs",
+              "ToolTip": "E:\\Bca-All-Notes\\5th Semester\\Dot Net\\Programs\\forCrud\\forCrud\\Program.cs",
+              "RelativeToolTip": "forCrud\\Program.cs",
+              "ViewState": "AgIAABcAAAAAAAAAAAAuwBEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-08T08:22:40.448Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

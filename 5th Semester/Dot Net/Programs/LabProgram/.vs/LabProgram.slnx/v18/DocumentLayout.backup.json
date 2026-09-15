@@ -1,0 +1,37 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "E:\\Bca-All-Notes\\5th Semester\\Dot Net\\Programs\\LabProgram\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{F29B8E0D-CE7D-4F6C-9957-43FF1A6D78E9}|LabProgram\\LabProgram.csproj|e:\\bca-all-notes\\5th semester\\dot net\\programs\\labprogram\\labprogram\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F29B8E0D-CE7D-4F6C-9957-43FF1A6D78E9}|LabProgram\\LabProgram.csproj|solutionrelative:labprogram\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "E:\\Bca-All-Notes\\5th Semester\\Dot Net\\Programs\\LabProgram\\LabProgram\\Program.cs",
+              "RelativeDocumentMoniker": "LabProgram\\Program.cs",
+              "ToolTip": "E:\\Bca-All-Notes\\5th Semester\\Dot Net\\Programs\\LabProgram\\LabProgram\\Program.cs",
+              "RelativeToolTip": "LabProgram\\Program.cs",
+              "ViewState": "AgIAAEcAAAAAAAAAAAAuwFIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-08T07:25:01.506Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

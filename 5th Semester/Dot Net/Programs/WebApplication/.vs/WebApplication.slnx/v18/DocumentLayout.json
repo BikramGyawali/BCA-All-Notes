@@ -3,6 +3,18 @@
   "WorkspaceRootPath": "E:\\Bca-All-Notes\\5th Semester\\Dot Net\\Programs\\WebApplication\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{0D41DD6B-3FB8-4203-A80B-0CF7C2A98B02}|WebApplication\\WebApplication.csproj|e:\\bca-all-notes\\5th semester\\dot net\\programs\\webapplication\\webapplication\\crud.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{0D41DD6B-3FB8-4203-A80B-0CF7C2A98B02}|WebApplication\\WebApplication.csproj|solutionrelative:webapplication\\crud.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0D41DD6B-3FB8-4203-A80B-0CF7C2A98B02}|WebApplication\\WebApplication.csproj|e:\\bca-all-notes\\5th semester\\dot net\\programs\\webapplication\\webapplication\\crud.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0D41DD6B-3FB8-4203-A80B-0CF7C2A98B02}|WebApplication\\WebApplication.csproj|solutionrelative:webapplication\\crud.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0D41DD6B-3FB8-4203-A80B-0CF7C2A98B02}|WebApplication\\WebApplication.csproj|E:\\Bca-All-Notes\\5th Semester\\Dot Net\\Programs\\WebApplication\\webapplication\\site.master||{B30AFBFF-D992-43B7-B62D-2642580A2883}",
+      "RelativeMoniker": "D:0:0:{0D41DD6B-3FB8-4203-A80B-0CF7C2A98B02}|WebApplication\\WebApplication.csproj|solutionrelative:webapplication\\site.master||{B30AFBFF-D992-43B7-B62D-2642580A2883}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{0D41DD6B-3FB8-4203-A80B-0CF7C2A98B02}|WebApplication\\WebApplication.csproj|e:\\bca-all-notes\\5th semester\\dot net\\programs\\webapplication\\webapplication\\registrationform.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{0D41DD6B-3FB8-4203-A80B-0CF7C2A98B02}|WebApplication\\WebApplication.csproj|solutionrelative:webapplication\\registrationform.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -51,10 +63,6 @@
       "RelativeMoniker": "D:0:0:{0D41DD6B-3FB8-4203-A80B-0CF7C2A98B02}|WebApplication\\WebApplication.csproj|solutionrelative:webapplication\\display.aspx.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0D41DD6B-3FB8-4203-A80B-0CF7C2A98B02}|WebApplication\\WebApplication.csproj|E:\\Bca-All-Notes\\5th Semester\\Dot Net\\Programs\\WebApplication\\webapplication\\site.master||{B30AFBFF-D992-43B7-B62D-2642580A2883}",
-      "RelativeMoniker": "D:0:0:{0D41DD6B-3FB8-4203-A80B-0CF7C2A98B02}|WebApplication\\WebApplication.csproj|solutionrelative:webapplication\\site.master||{B30AFBFF-D992-43B7-B62D-2642580A2883}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{0D41DD6B-3FB8-4203-A80B-0CF7C2A98B02}|WebApplication\\WebApplication.csproj|E:\\Bca-All-Notes\\5th Semester\\Dot Net\\Programs\\WebApplication\\webapplication\\about.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{0D41DD6B-3FB8-4203-A80B-0CF7C2A98B02}|WebApplication\\WebApplication.csproj|solutionrelative:webapplication\\about.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -70,24 +78,37 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Display.aspx",
-              "DocumentMoniker": "E:\\Bca-All-Notes\\5th Semester\\Dot Net\\Programs\\WebApplication\\WebApplication\\Display.aspx",
-              "RelativeDocumentMoniker": "WebApplication\\Display.aspx",
-              "ToolTip": "E:\\Bca-All-Notes\\5th Semester\\Dot Net\\Programs\\WebApplication\\WebApplication\\Display.aspx",
-              "RelativeToolTip": "WebApplication\\Display.aspx",
-              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
-              "WhenOpened": "2026-08-06T17:06:24.109Z",
+              "DocumentIndex": 1,
+              "Title": "CRUD.aspx.cs",
+              "DocumentMoniker": "E:\\Bca-All-Notes\\5th Semester\\Dot Net\\Programs\\WebApplication\\WebApplication\\CRUD.aspx.cs",
+              "RelativeDocumentMoniker": "WebApplication\\CRUD.aspx.cs",
+              "ToolTip": "E:\\Bca-All-Notes\\5th Semester\\Dot Net\\Programs\\WebApplication\\WebApplication\\CRUD.aspx.cs",
+              "RelativeToolTip": "WebApplication\\CRUD.aspx.cs",
+              "ViewState": "AgIAAHUAAAAAAAAAAAAqwH4AAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-08T08:43:12.767Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 0,
+              "Title": "CRUD.aspx",
+              "DocumentMoniker": "E:\\Bca-All-Notes\\5th Semester\\Dot Net\\Programs\\WebApplication\\WebApplication\\CRUD.aspx",
+              "RelativeDocumentMoniker": "WebApplication\\CRUD.aspx",
+              "ToolTip": "E:\\Bca-All-Notes\\5th Semester\\Dot Net\\Programs\\WebApplication\\WebApplication\\CRUD.aspx",
+              "RelativeToolTip": "WebApplication\\CRUD.aspx",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2026-09-08T08:42:34.486Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
               "Title": "Calculator.aspx.cs",
               "DocumentMoniker": "E:\\Bca-All-Notes\\5th Semester\\Dot Net\\Programs\\WebApplication\\WebApplication\\Calculator.aspx.cs",
               "RelativeDocumentMoniker": "WebApplication\\Calculator.aspx.cs",
@@ -95,12 +116,11 @@
               "RelativeToolTip": "WebApplication\\Calculator.aspx.cs",
               "ViewState": "AgIAACAAAAAAAAAAAAAwwDgAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-08-03T17:31:53.276Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-08-03T17:31:53.276Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 7,
               "Title": "Redirect.aspx.cs",
               "DocumentMoniker": "E:\\Bca-All-Notes\\5th Semester\\Dot Net\\Programs\\WebApplication\\WebApplication\\Redirect.aspx.cs",
               "RelativeDocumentMoniker": "WebApplication\\Redirect.aspx.cs",
@@ -108,12 +128,11 @@
               "RelativeToolTip": "WebApplication\\Redirect.aspx.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-08-06T16:55:03.336Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-08-06T16:55:03.336Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 8,
               "Title": "Redirect.aspx",
               "DocumentMoniker": "E:\\Bca-All-Notes\\5th Semester\\Dot Net\\Programs\\WebApplication\\WebApplication\\Redirect.aspx",
               "RelativeDocumentMoniker": "WebApplication\\Redirect.aspx",
@@ -121,12 +140,11 @@
               "RelativeToolTip": "WebApplication\\Redirect.aspx",
               "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
-              "WhenOpened": "2026-08-06T16:47:44.634Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-08-06T16:47:44.634Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 5,
               "Title": "Display.aspx.cs",
               "DocumentMoniker": "E:\\Bca-All-Notes\\5th Semester\\Dot Net\\Programs\\WebApplication\\WebApplication\\Display.aspx.cs",
               "RelativeDocumentMoniker": "WebApplication\\Display.aspx.cs",
@@ -134,12 +152,11 @@
               "RelativeToolTip": "WebApplication\\Display.aspx.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAcwAQAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-08-06T17:08:45.421Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-08-06T17:08:45.421Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 3,
               "Title": "RegistrationForm.aspx.cs",
               "DocumentMoniker": "E:\\Bca-All-Notes\\5th Semester\\Dot Net\\Programs\\WebApplication\\WebApplication\\RegistrationForm.aspx.cs",
               "RelativeDocumentMoniker": "WebApplication\\RegistrationForm.aspx.cs",
@@ -152,7 +169,32 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
+              "Title": "Site.Master",
+              "DocumentMoniker": "E:\\Bca-All-Notes\\5th Semester\\Dot Net\\Programs\\WebApplication\\WebApplication\\Site.Master",
+              "RelativeDocumentMoniker": "WebApplication\\Site.Master",
+              "ToolTip": "E:\\Bca-All-Notes\\5th Semester\\Dot Net\\Programs\\WebApplication\\WebApplication\\Site.Master",
+              "RelativeToolTip": "WebApplication\\Site.Master",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2026-08-01T17:56:52.683Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Display.aspx",
+              "DocumentMoniker": "E:\\Bca-All-Notes\\5th Semester\\Dot Net\\Programs\\WebApplication\\WebApplication\\Display.aspx",
+              "RelativeDocumentMoniker": "WebApplication\\Display.aspx",
+              "ToolTip": "E:\\Bca-All-Notes\\5th Semester\\Dot Net\\Programs\\WebApplication\\WebApplication\\Display.aspx",
+              "RelativeToolTip": "WebApplication\\Display.aspx",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2026-08-06T17:06:24.109Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "RegistrationForm.aspx",
               "DocumentMoniker": "E:\\Bca-All-Notes\\5th Semester\\Dot Net\\Programs\\WebApplication\\WebApplication\\RegistrationForm.aspx",
               "RelativeDocumentMoniker": "WebApplication\\RegistrationForm.aspx",
@@ -160,12 +202,11 @@
               "RelativeToolTip": "WebApplication\\RegistrationForm.aspx",
               "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
-              "WhenOpened": "2026-08-06T18:24:52.901Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-08-06T18:24:52.901Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 10,
               "Title": "Calculator.aspx",
               "DocumentMoniker": "E:\\Bca-All-Notes\\5th Semester\\Dot Net\\Programs\\WebApplication\\WebApplication\\Calculator.aspx",
               "RelativeDocumentMoniker": "WebApplication\\Calculator.aspx",
@@ -173,12 +214,11 @@
               "RelativeToolTip": "WebApplication\\Calculator.aspx",
               "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
-              "WhenOpened": "2026-08-03T16:46:59.96Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-08-03T16:46:59.96Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 11,
               "Title": "Register.aspx.cs",
               "DocumentMoniker": "E:\\Bca-All-Notes\\5th Semester\\Dot Net\\Programs\\WebApplication\\WebApplication\\Register.aspx.cs",
               "RelativeDocumentMoniker": "WebApplication\\Register.aspx.cs",
@@ -186,12 +226,11 @@
               "RelativeToolTip": "WebApplication\\Register.aspx.cs",
               "ViewState": "AgIAACkAAAAAAAAAAADwv0EAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-08-01T18:08:33.84Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-08-01T18:08:33.84Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 12,
               "Title": "Register.aspx",
               "DocumentMoniker": "E:\\Bca-All-Notes\\5th Semester\\Dot Net\\Programs\\WebApplication\\WebApplication\\Register.aspx",
               "RelativeDocumentMoniker": "WebApplication\\Register.aspx",
@@ -199,12 +238,11 @@
               "RelativeToolTip": "WebApplication\\Register.aspx",
               "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
-              "WhenOpened": "2026-08-01T18:02:39.562Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-08-01T18:02:39.562Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 13,
               "Title": "Web.config",
               "DocumentMoniker": "E:\\Bca-All-Notes\\5th Semester\\Dot Net\\Programs\\WebApplication\\WebApplication\\Web.config",
               "RelativeDocumentMoniker": "WebApplication\\Web.config",
@@ -217,7 +255,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 14,
               "Title": "Display.aspx.designer.cs",
               "DocumentMoniker": "E:\\Bca-All-Notes\\5th Semester\\Dot Net\\Programs\\WebApplication\\WebApplication\\Display.aspx.designer.cs",
               "RelativeDocumentMoniker": "WebApplication\\Display.aspx.designer.cs",
@@ -229,19 +267,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "Site.Master",
-              "DocumentMoniker": "E:\\Bca-All-Notes\\5th Semester\\Dot Net\\Programs\\WebApplication\\WebApplication\\Site.Master",
-              "RelativeDocumentMoniker": "WebApplication\\Site.Master",
-              "ToolTip": "E:\\Bca-All-Notes\\5th Semester\\Dot Net\\Programs\\WebApplication\\WebApplication\\Site.Master",
-              "RelativeToolTip": "WebApplication\\Site.Master",
-              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
-              "WhenOpened": "2026-08-01T17:56:52.683Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 15,
               "Title": "About.aspx.cs",
               "DocumentMoniker": "E:\\Bca-All-Notes\\5th Semester\\Dot Net\\Programs\\WebApplication\\WebApplication\\About.aspx.cs",
               "RelativeDocumentMoniker": "WebApplication\\About.aspx.cs",
@@ -253,7 +279,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 16,
               "Title": "About.aspx",
               "DocumentMoniker": "E:\\Bca-All-Notes\\5th Semester\\Dot Net\\Programs\\WebApplication\\WebApplication\\About.aspx",
               "RelativeDocumentMoniker": "WebApplication\\About.aspx",
